@@ -1,4 +1,4 @@
-@mixin retina {
+/*@mixin retina {
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     @content;
   }
@@ -40,7 +40,7 @@
   @media (max-width: $vp-375 - 1) {
     @content;
   }
-}
+}*/
 
 // Mobile first
 

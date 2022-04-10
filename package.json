@@ -1,7 +1,7 @@
 {
-  "name": "Liga-A-start-template",
+  "name": "liga-a-start_smart_device",
   "version": "2.0.0",
-  "description": "Стартовый шаблон сборки Лиги А",
+  "description": "Проект 3.0 - Smart Device",
   "browserslist": [
     "last 3 versions",
     "IE 11",
