@@ -1,0 +1,131 @@
+.site-sections {
+  width: 39%;
+  padding: 0;
+  padding-top: 5px;
+  margin: 0;
+  margin-right: 2.5%;
+  box-sizing: border-box;
+
+  @media (max-width: $tablet-width) {
+    margin-right: auto;
+  }
+
+  @media (max-width: $mobile-width) {
+    position: relative;
+    width: 100%;
+    padding: 22px 0;
+    margin: 0 auto;
+  }
+}
+
+.site-sections::before {
+  @media (max-width: $mobile-width) {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -9%;
+    width: 200vw;
+    max-width: 100vw;
+    height: 1px;
+    background-color: $border-white;
+  }
+}
+
+.site-sections::after {
+  @media (max-width: $mobile-width) {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: -9%;
+    width: 200vw;
+    max-width: 100vw;
+    height: 1px;
+    background-color: $border-white;
+  }
+}
+
+.site-sections h2 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-family: $roboto;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $text-white-absolute;
+  box-sizing: border-box;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 0;
+  }
+}
+
+.site-sections ul {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  @media (max-width: $tablet-width) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 20px;
+    transition: all 2s ease 0s;
+  }
+}
+
+.footer__group--open ul {
+  @media (max-width: $mobile-width) {
+    height: auto;
+    overflow: visible;
+    opacity: 1;
+  }
+}
+
+.footer__group--close ul {
+  @media (max-width: $mobile-width) {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    //transition: all 2s ease 0s;
+  }
+}
+
+.site-sections li {
+  width: 80%;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 7px;
+  }
+}
+
+.site-sections a {
+  padding: 0;
+  margin: 0;
+  font-family: $pt-mono;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: $text-white-absolute-70;
+  cursor: pointer;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
+}

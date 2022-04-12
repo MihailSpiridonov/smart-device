@@ -1,11 +1,37 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import {accordions, footer, hideActiveClass, hideNoactiveClass, openAccordion, closeAccordion} from './modules/accordion/accordion.js';
 
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
+
+  // Аккордион
+  if (accordions.length > 0) {
+    footer.classList.remove('footer--nojs');
+    for (let i = 0; i < accordions.length; i++) {
+      const accordion = accordions[i];
+      const accordionButton = accordion.querySelector('[data-accordion-button]');
+      accordion.classList.add('footer__group--close');
+      accordionButton.addEventListener('click', () => {
+        hideActiveClass();
+        accordion.classList.add('footer__group--active');
+        if (accordion.classList.contains('footer__group--active')) {
+          if (accordion.classList.contains('footer__group--close')) {
+            hideNoactiveClass();
+            openAccordion(accordion);
+          } else if (accordion.classList.contains('footer__group--open')) {
+            accordion.classList.remove('footer__group--active');
+            closeAccordion(accordion);
+          }
+        } else {
+          accordion.classList.remove('footer__group--open');
+        }
+      });
+    }
+  }
   // ---------------------------------
 
   iosVhFix();
