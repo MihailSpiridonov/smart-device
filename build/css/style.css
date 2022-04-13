@@ -498,21 +498,12 @@ img {
   min-height: 100%;
   background-color: $color-overlay;
   overflow: hidden;
-}
+}*/
 
 .page__main {
   padding: 0;
   margin: 0;
-  margin-bottom: 115px;
-
-  @media (max-width: $tablet-width) {
-    margin-bottom: 105px;
-  }
-
-  @media (max-width: $mobile-width) {
-    margin-bottom: 55px;
-  }
-}*/
+}
 
 .page__footer {
   min-height: 280px;
@@ -804,7 +795,7 @@ img {
 .advantages {
   width: 64vw;
   min-height: 630px;
-  margin-bottom: 125px;
+  margin-bottom: 115px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -891,15 +882,170 @@ img {
   color: #f2f5f7;
 }
 
-/*@import "blocks/main/advantages/advantages.scss";
-@import "blocks/main/advantage-card/advantage-card.scss";
-@import "blocks/main/next-cruises/next-cruises.scss";
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 64vw;
+  min-height: 320px;
+  margin-bottom: 105px;
+}
+
+.about__image {
+  position: relative;
+  width: 350px;
+  min-height: 300px;
+  padding: 0;
+  padding-left: 50px;
+  margin: 0;
+  margin-right: 100px;
+}
+
+.about__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+.about__description-wrapper {
+  padding: 0;
+  padding-top: 5px;
+  margin: 0;
+}
+
+.about__description-wrapper h3 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 51px;
+  color: #041827;
+}
+
+.about__description-wrapper--max .about__wrapper-mobile,
+.about__description-wrapper--no-js .about__wrapper-mobile {
+  height: auto;
+  margin-bottom: 0;
+}
+
+.about__description-wrapper p {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: "PT Mono", "Courier New", monospace;
+  font-size: 16px;
+  line-height: 22px;
+  color: #041827;
+}
+
+.about__description-whole {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.about__description-wrapper--max .about__description-whole,
+.about__description-wrapper--no-js .about__description-whole {
+  height: auto;
+  overflow: visible;
+  opacity: 1;
+}
+
+.about__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 180px;
+  min-height: 45px;
+  margin: 0;
+  margin-top: 15px;
+  background: none;
+  border: 1px solid #00b2ff;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.about__button:hover {
+  background-color: #f2f5f7;
+  opacity: 0.7;
+}
+
+.about__button:active {
+  background-color: #f2f5f7;
+  opacity: 0.3;
+}
+
+.about__description-wrapper--no-js .about__button {
+  display: none;
+}
+
+.about__button-text {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #00b2ff;
+}
+
+.about__button-text--close {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.about__description-wrapper--max .about__button-text--close {
+  width: auto;
+  height: auto;
+  overflow: visible;
+  opacity: 1;
+}
+
+.about__button-text--open {
+  width: auto;
+  height: auto;
+  overflow: visible;
+  opacity: 1;
+  -webkit-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.about__description-wrapper--max .about__button-text--open {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+/*@import "blocks/main/next-cruises/next-cruises.scss";
 @import "blocks/main/cruise/cruise.scss";
 @import "blocks/main/booking/booking.scss";
 @import "blocks/main/form/form.scss";
 @import "blocks/main/contacts/contacts.scss";
-@import "blocks/main/our-contacts/our-contacts.scss";
-*/
+@import "blocks/main/our-contacts/our-contacts.scss";*/
 
 .footer__wrapper {
   display: -webkit-box;
@@ -1229,7 +1375,7 @@ img {
   .advantages {
     width: 87vw;
     min-height: 750px;
-    margin-bottom: 80px;
+    margin-bottom: 75px;
   }
 
   .advantages ul {
@@ -1252,6 +1398,38 @@ img {
 
   .advantages__card h3 {
     margin-bottom: 7px;
+  }
+
+  .about {
+    width: 87vw;
+    min-height: 380px;
+    margin-bottom: 75px;
+  }
+
+  .about__image {
+    width: 650px;
+    height: 320px;
+    margin-right: 28px;
+  }
+
+  .about__image img {
+    padding-top: 5px;
+  }
+
+  .about__description-wrapper {
+    padding: 0;
+  }
+
+  .about__description-wrapper h3 {
+    margin-bottom: 13px;
+  }
+
+  .about__description-wrapper p {
+    margin-bottom: 18px;
+  }
+
+  .about__button {
+    margin-top: 0;
   }
 
   .footer__wrapper {
@@ -1404,7 +1582,7 @@ img {
   .advantages {
     width: 84vw;
     min-height: 1420px;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
 
   .advantages ul {
@@ -1439,6 +1617,37 @@ img {
 
   .advantages__card--big p {
     min-height: 190px;
+  }
+
+  .about__image {
+    display: none;
+  }
+
+  .about__description-wrapper h3 {
+    margin-bottom: 11px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .about__wrapper-mobile {
+    height: 200px;
+    margin-bottom: 20px;
+    overflow-y: hidden;
+  }
+
+  .about__description-wrapper p {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .about__button {
+    width: 160px;
+    min-height: 35px;
+  }
+
+  .about__button-text {
+    font-size: 14px;
+    line-height: 16px;
   }
 
   .footer__wrapper {

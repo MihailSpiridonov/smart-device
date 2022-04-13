@@ -1,19 +1,19 @@
 .advantages {
   width: 64vw;
   min-height: 630px;
-  margin-bottom: 125px;
+  margin-bottom: 115px;
   box-sizing: border-box;
 
   @media (max-width: $tablet-width) {
     width: 87vw;
     min-height: 750px;
-    margin-bottom: 80px;
+    margin-bottom: 75px;
   }
 
   @media (max-width: $mobile-width) {
     width: 84vw;
     min-height: 1420px;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
 }
 

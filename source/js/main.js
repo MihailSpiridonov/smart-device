@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {accordions, footer, hideActiveClass, hideNoactiveClass, openAccordion, closeAccordion} from './modules/accordion/accordion.js';
+import {aboutBlock, aboutButton, showDescription} from './modules/description/description.js';
 
 // ---------------------------------
 
@@ -32,6 +33,12 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
+
+  // Описание компании
+  aboutBlock.classList.remove('about__description-wrapper--no-js');
+  aboutButton.addEventListener('click', showDescription);
+
+
   // ---------------------------------
 
   iosVhFix();
