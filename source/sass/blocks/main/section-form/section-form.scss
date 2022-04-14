@@ -1,0 +1,68 @@
+.section-form {
+  position: relative;
+  min-height: 840px;
+  background-color: $background-blue--lighter;
+  overflow: hidden;
+
+  @media (max-width: $tablet-width) {
+    min-height: 580px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 750px;
+  }
+}
+
+.section-form__desctop-background {
+  transform: rotate(-40.7deg);
+  position: absolute;
+  top: -47%;
+  left: -33%;
+  width: 1565px;
+  height: 950px;
+  background-color: $background-blue;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.section-form__wrapper {
+  display: flex;
+  width: 63vw;
+  height: 100%;
+  padding: 0;
+  padding-top: 165px;
+  padding-bottom: 50px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 48px;
+  }
+}
+
+.section-form__image {
+  z-index: 1;
+  width: 510px;
+  height: 285px;
+  padding: 0;
+  padding-top: 80px;
+  margin: 0;
+  margin-right: 110px;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.section-form__image img {
+  width: 100%;
+  height: 100%;
+}
+
+.section-form__form {
+  width: 48%;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+  }
+}

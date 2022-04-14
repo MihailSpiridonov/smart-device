@@ -91,7 +91,7 @@
           <h1 class="visually-hidden">Компания по производству и монтажу печатных плат, по поставке комплектующих, блоков и модулей</h1>
           <h2>Печатные платы</h2>
           <p>производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
-          <a href="#">
+          <a href="#section-form">
             <span class="main-block__link main-block__link--descktop">Получить бесплатную консультацию</span>
             <span class="main-block__link main-block__link--mobile">бесплатная консультация</span>
           </a>
@@ -256,6 +256,49 @@
 
 <!-- services end -->
 <!-- form start -->
+
+      <section class="section-form" id="section-form">
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <div class="section-form__desctop-background"></div>
+        <div class="section-form__wrapper wrapper">
+          <div class="section-form__image">
+            <picture>
+              <source type="image/webp" srcset="img/content/paper_airplane_3d_model.webp 1x, img/content/paper_airplane_3d_model_2x.webp 2x">
+
+              <!--desctop 1х: 510px; 2x: 1020px; -->
+              <img src="img/content/paper_airplane_3d_model.png" srcset="img/content/paper_airplane_3d_model_2x.png 2x" width="510" height="285" alt="Изображение 3d-модели бумажного самолетика">
+            </picture>
+          </div>
+          <div class="section-form__form form">
+            <form action="https://echo.htmlacademy.ru/" method="get" name="your question">
+              <div class="form__wrapper-title">
+                <h2>Остались вопросы? Задайте их&nbsp;нам!</h2>
+                <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
+              </div>
+              <div class="form__wrapper-label">
+                <label>
+                  <input type="text" name="name" placeholder="Имя" required>
+                </label>
+                <label>
+                  <input type="tel" name="phone" placeholder="Телефон" pattern="^[ 0-9]+$" required>
+                </label>
+              </div>
+              <div class="form__textarea">
+                <label>
+                  <textarea name="question" placeholder="Ваш вопрос"></textarea>
+                </label>
+              </div>
+              <div class="form__wrapper-submit-and-checkbox">
+                <button type="submit">Задать вопрос</button>
+                <input id="checkbox" type="checkbox" name="checkbox" required>
+                <label for="checkbox">
+                  <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
+                </label>
+              </div>
+            </form>
+        </div>
+        </div>
+      </section>
     </main>
 
 <!-- form end -->
