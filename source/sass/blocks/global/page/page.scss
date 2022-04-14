@@ -23,38 +23,10 @@
   overflow-x: hidden;
   box-sizing: border-box;
 }
-/*
+
 .page__body--overlay {
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  min-height: 100%;
-  background-color: $color-overlay;
   overflow: hidden;
 }
-
-.page__overlay {
-  position: relative;
-}
-
-.page__overlay::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 2;
-  width: 100vw;
-  height: 100vh;
-  min-height: 100%;
-  background-color: $color-overlay;
-  overflow: hidden;
-}*/
 
 .page__main {
   padding: 0;

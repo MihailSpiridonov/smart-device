@@ -20,9 +20,6 @@
 @import "blocks/main/services/services.scss";
 @import "blocks/main/section-form/section-form.scss";
 @import "blocks/main/form/form.scss";
-/*@import "blocks/main/booking/booking.scss";
-@import "blocks/main/contacts/contacts.scss";
-@import "blocks/main/our-contacts/our-contacts.scss";*/
 
 // Footer
 @import "blocks/footer/footer.scss";
@@ -32,31 +29,9 @@
 @import "blocks/footer/accordion/accordion.scss";
 
 // Popup
-// @import "blocks/popup/popup.scss";
+@import "blocks/popup/popup.scss";
 
 
-// ---------------------------------
-/*
-@import "vendor/normalize";
-// Swiper 7.4.1
-// @import "vendor/swiper";
-
-// Global
-// ---------------------------------
-
-@import "variables";
-@import "mixins";
-@import "global/fonts";
-@import "global/reboot";
-@import "global/utils";
-@import "global/container";
-
-// Blocks
-// ---------------------------------
-
-@import "blocks/btn";
-@import "blocks/modal";
-*/
 // ---------------------------------
 
 // ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg

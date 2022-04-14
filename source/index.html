@@ -19,7 +19,7 @@
 
 <!-- header start -->
 
-  <body class="page__body">
+  <body class="page__body" data-body>
     <header class="page__header header">
       <div class="header__wrapper wrapper">
         <div class="header__logo logo">
@@ -61,7 +61,7 @@
           </ul>
         </nav>
         <div class="header__button">
-          <button>Заказать звонок</button>
+          <button data-popup-open>Заказать звонок</button>
         </div>
       </div>
     </header>
@@ -91,7 +91,7 @@
           <h1 class="visually-hidden">Компания по производству и монтажу печатных плат, по поставке комплектующих, блоков и модулей</h1>
           <h2>Печатные платы</h2>
           <p>производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
-          <a href="#section-form">
+          <a href="#section-form" data-link-form>
             <span class="main-block__link main-block__link--descktop">Получить бесплатную консультацию</span>
             <span class="main-block__link main-block__link--mobile">бесплатная консультация</span>
           </a>
@@ -104,7 +104,7 @@
       <section class="advantages wrapper">
         <h2 class="visually-hidden">Наши преимущества</h2>
         <ul>
-          <li>
+          <li tabindex="0">
             <div class="advantages__card advantages__card--big">
               <svg width="35" height="35" aria-label="Иконка, изображающая будильник">
                 <use xlink:href="img/sprite_auto.svg#stopwatch"></use>
@@ -113,7 +113,7 @@
               <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и&nbsp;доставлять заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки</p>
             </div>
           </li>
-          <li>
+          <li tabindex="0">
             <div class="advantages__card advantages__card--big">
               <svg width="35" height="35" aria-label="Иконка, изображающая людей под часами">
                 <use xlink:href="img/sprite_auto.svg#hired"></use>
@@ -122,7 +122,7 @@
               <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с&nbsp;такими компаниями обеспичивает хорошее качество нашей продукции.</p>
             </div>
           </li>
-          <li>
+          <li tabindex="0">
             <div class="advantages__card">
               <svg width="35" height="35" aria-label="Иконка, изображающая детектива">
                 <use xlink:href="img/sprite_auto.svg#detective"></use>
@@ -131,7 +131,7 @@
               <p>По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную конфеденциальность.</p>
             </div>
           </li>
-          <li>
+          <li tabindex="0">
             <div class="advantages__card">
               <svg width="35" height="35" aria-label="Иконка, изображающая ярлык">
                 <use xlink:href="img/sprite_auto.svg#tag"></use>
@@ -187,7 +187,7 @@
             <h2>Товары и&nbsp;услуги Smart Device</h2>
           </div>
           <ul>
-            <li>
+            <li tabindex="0">
               <a href="#">
                 <div class="services__card">
                   <h3>Производство печатных плат</h3>
@@ -204,11 +204,11 @@
                         mobile 1х: 270px; 2x: 540px; -->
                     <img src="img/content/card-production_bg_desctop.jpg" srcset="img/content/card-production_bg_desctop_2x.jpg 2x" width="350" height="650" alt="Изображение печатной платы">
                   </picture>
-                  <button></button>
+                  <button tabindex="-1"></button>
                 </div>
               </a>
             </li>
-            <li>
+            <li tabindex="0">
               <a href="#">
                 <div class="services__card">
                   <h3>Монтаж печатных плат</h3>
@@ -225,11 +225,11 @@
                         mobile 1х: 270px; 2x: 540px; -->
                     <img src="img/content/card-mounting_bg_desctop.jpg" srcset="img/content/card-mounting_bg_desctop_2x.jpg 2x" width="350" height="650" alt="Изображение печатной платы">
                   </picture>
-                  <button></button>
+                  <button tabindex="-1"></button>
                 </div>
               </a>
             </li>
-            <li>
+            <li tabindex="0">
               <a href="#">
                 <div class="services__card">
                   <h3>Комплектующие для светотехники</h3>
@@ -246,7 +246,7 @@
                         mobile 1х: 270px; 2x: 540px; -->
                     <img src="img/content/card-spares_bg_desctop.jpg" srcset="img/content/card-spares_bg_desctop_2x.jpg 2x" width="350" height="650" alt="Изображение печатной платы">
                   </picture>
-                  <button></button>
+                  <button tabindex="-1"></button>
                 </div>
               </a>
             </li>
@@ -270,7 +270,7 @@
             </picture>
           </div>
           <div class="section-form__form form">
-            <form action="https://echo.htmlacademy.ru/" method="get" name="your question">
+            <form action="https://echo.htmlacademy.ru/" method="get" name="your question" data-form>
               <div class="form__wrapper-title">
                 <h2>Остались вопросы? Задайте их&nbsp;нам!</h2>
                 <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
@@ -291,7 +291,7 @@
               <div class="form__wrapper-submit-and-checkbox">
                 <button type="submit">Задать вопрос</button>
                 <input id="checkbox" type="checkbox" name="checkbox" required>
-                <label for="checkbox">
+                <label for="checkbox" tabindex="0">
                   <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
                 </label>
               </div>
@@ -302,7 +302,44 @@
     </main>
 
 <!-- form end -->
-<!-- main end -->
+<!-- main end --><!-- popup start -->
+
+      <aside class="popup popup--close" data-popup>
+        <div class="popup__wrapper" id="show-popup">
+          <form action="https://echo.htmlacademy.ru/" method="get" name="your question" data-form-popup>
+            <div class="popup__close" data-popup-close>
+              <div class="popup__line popup__line--1"></div>
+              <div class="popup__line popup__line--2"></div>
+            </div>
+            <div class="popup__wrapper-title">
+              <h2>Закажите звонок</h2>
+              <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
+            </div>
+            <div class="popup__wrapper-label">
+              <label>
+                <input type="text" name="name" placeholder="Имя" required>
+              </label>
+              <label>
+                <input type="tel" name="phone" placeholder="Телефон" pattern="^[ 0-9]+$" required>
+              </label>
+            </div>
+            <div class="popup__textarea">
+              <label>
+                <textarea name="question" placeholder="Ваш вопрос"></textarea>
+              </label>
+            </div>
+            <div class="popup__wrapper-submit-and-checkbox">
+              <button type="submit">Отправить</button>
+              <input id="checkbox-popup" type="checkbox" name="checkbox" required>
+              <label for="checkbox-popup">
+                <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
+              </label>
+            </div>
+          </form>
+        </div>
+      </aside>
+
+<!-- popup end -->
 
 <!-- footer start -->
 

@@ -1,10 +1,88 @@
-.form form {
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
+.popup {
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-overlay;
 }
 
-.form__wrapper-title {
+.popup--open {
+  display: flex;
+}
+
+.popup--close {
+  display: none;
+}
+
+.popup__wrapper {
+  position: relative;
+  width: 500px;
+  min-height: 610px;
+
+  @media (max-width: $tablet-width) {
+    width: 70%;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 90%;
+    min-height: 310px;
+  }
+}
+
+.popup__close {
+  position: absolute;
+  content: "";
+  top: 40px;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+  background: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.popup__line {
+  position: absolute;
+  content: "";
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 2px;
+  background-color: $text-white-absolute;
+}
+
+.popup__line--1 {
+  transform: rotate(45deg);
+}
+
+.popup__line--2 {
+  transform: rotate(-45deg);
+}
+
+.popup form {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: $background-blue--lighter;
+  border-radius: 3px;
+
+  @media (max-width: $mobile-width) {
+    padding: 10px;
+  }
+}
+
+.popup__wrapper-title {
   padding: 0;
   margin: 0;
   margin-bottom: 35px;
@@ -14,19 +92,19 @@
   }
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 33px;
+    margin-bottom: 10px;
   }
 }
 
-.form h2 {
+.popup__wrapper-title h2 {
   max-width: 100%;
   padding: 0;
   margin: 0;
   margin-bottom: 13px;
   font-family: $roboto;
   font-weight: 400;
-  font-size: 36px;
-  line-height: 51px;
+  font-size: 30px;
+  line-height: 42px;
   color: $text-white-absolute;
 
   @media (max-width: $tablet-width) {
@@ -39,11 +117,10 @@
   }
 }
 
-.form p {
+.popup__wrapper-title p {
   display: inline-block;
-  max-width: 100%;
+  width: 95%;
   padding: 0;
-  padding-left: 5px;
   margin: 0;
   font-family: $pt-mono;
   font-size: 16px;
@@ -51,39 +128,31 @@
   color: $text-white-absolute;
   box-sizing: border-box;
 
-  @media (max-width: $tablet-width) {
-    padding-left: 0;
-  }
-
   @media (max-width: $mobile-width) {
     font-size: 14px;
     line-height: 19px;
   }
 }
 
-.form__wrapper-label {
+.popup__wrapper-label {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  padding-left: 5px;
+  margin-bottom: 20px;
   box-sizing: border-box;
 
-  @media (max-width: $tablet-width) {
-    padding-left: 0;
-  }
-
   @media (max-width: $mobile-width) {
-    flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 
-.form label {
+.popup label {
   padding: 0;
   margin: 0;
 }
 
-.form input {
-  width: 275px;
+.popup input {
+  width: 100%;
   min-height: 50px;
   padding: 15px;
   margin: 0;
@@ -107,42 +176,41 @@
     color: $text-white-absolute-70;
   }
 
-  @media (max-width: $tablet-width) {
-    width: 320px;
-  }
-
   @media (max-width: $mobile-width) {
-    width: 270px;
+    min-height: 40px;
+    padding: 10px;
   }
 }
 
-.form input[type="text"] {
+.popup input[type="text"] {
   margin: 0;
   margin-bottom: 20px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 10px;
+  }
 }
 
-.form input[type="tel"] {
+.popup input[type="tel"] {
   margin: 0;
 }
 
-.form__textarea {
+.popup__textarea {
   padding: 0;
-  padding-left: 5px;
   margin: 0;
   margin-bottom: 25px;
   box-sizing: border-box;
 
   @media (max-width: $tablet-width) {
     margin-bottom: 30px;
-    padding-left: 0;
   }
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 
-.form textarea {
+.popup textarea {
   width: 100%;
   min-height: 155px;
   padding: 15px;
@@ -168,33 +236,23 @@
   }
 
   @media (max-width: $mobile-width) {
-    padding-top: 23px;
-    min-height: 180px;
+    padding-top: 13px;
+    min-height: 130px;
   }
 }
 
-.form__wrapper-submit-and-checkbox {
+.popup__wrapper-submit-and-checkbox {
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
-  padding-left: 5px;
   box-sizing: border-box;
-
-  @media (max-width: $tablet-width) {
-    padding-left: 0;
-  }
-
-  @media (max-width: $mobile-width) {
-    flex-direction: column;
-  }
 }
 
-.form button {
-  width: 50%;
-  min-width: 265px;
+.popup button {
+  width: 100%;
   min-height: 45px;
   padding: 0;
   margin: 0;
-  margin-right: 50px;
   background-color: $dark-blue;
   border: none;
   border-radius: 3px;
@@ -227,15 +285,15 @@
     width: 100%;
     padding-top: 3px;
     margin-right: 0;
-    margin-bottom: 17px;
+    margin-bottom: 10px;
   }
 }
 
-.form input[type="checkbox"] {
+.popup input[type="checkbox"] {
   display: none;
 }
 
-.form span {
+.popup span {
   display: block;
   padding: 0;
   padding-top: 13px;
@@ -258,7 +316,7 @@
   }
 }
 
-.form__wrapper-submit-and-checkbox label {
+.popup__wrapper-submit-and-checkbox label {
   position: relative;
   cursor: pointer;
   transition: all 0.5s ease;
@@ -274,29 +332,20 @@
   &::after {
     position: absolute;
     content: "";
-    top: 23px;
+    top: 13px;
     left: 0;
     width: 13px;
     height: 13px;
     border: 1px solid $text-white-absolute;
-
-    @media (max-width: $tablet-width) {
-      top: 15px;
-    }
-
-    @media (max-width: $mobile-width) {
-      left: 5px;
-    }
   }
 }
 
-.form__wrapper-submit-and-checkbox input:checked + label::before {
+.popup__wrapper-submit-and-checkbox input:checked + label::before {
   display: block;
   position: absolute;
   content: "";
-  top: 26px;
+  top: 16px;
   left: 4px;
-  z-index: 1;
   width: 12px;
   height: 8px;
   background-repeat: no-repeat;

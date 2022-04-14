@@ -2,12 +2,17 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {accordions, footer, hideActiveClass, hideNoactiveClass, openAccordion, closeAccordion} from './modules/accordion/accordion.js';
 import {aboutBlock, aboutButton, showDescription} from './modules/description/description.js';
+import {anchor, toSlide} from './modules/smooth-scroll/smooth-scroll.js';
+import {form, formSend} from './modules/form-validation/form-validation.js';
+import {buttonOpenPopup, showModal} from './modules/modal-popup/modal-popup.js';
 
 // ---------------------------------
-
 window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
+  // Модальное окно
+  buttonOpenPopup.addEventListener('click', showModal);
+
 
   // Аккордион
   if (accordions.length > 0) {
@@ -34,9 +39,18 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+
   // Описание компании
   aboutBlock.classList.remove('about__description-wrapper--no-js');
   aboutButton.addEventListener('click', showDescription);
+
+
+  // Плавный скролл по якорям из навигации
+  anchor.addEventListener('click', toSlide);
+
+
+  // Form validation
+  form.addEventListener('submit', formSend);
 
 
   // ---------------------------------
