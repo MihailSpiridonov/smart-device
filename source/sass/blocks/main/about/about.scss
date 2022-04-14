@@ -9,6 +9,11 @@
     min-height: 380px;
     margin-bottom: 75px;
   }
+
+  @media (max-width: $mobile-width) {
+    min-height: 305px;
+    margin-bottom: 80px;
+  }
 }
 
 .about__image {

@@ -521,7 +521,7 @@ img {
 
 .header {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   width: 100vw;
   min-height: 120px;
   padding: 30px 0;
@@ -1040,8 +1040,158 @@ img {
   opacity: 0;
 }
 
-/*@import "blocks/main/next-cruises/next-cruises.scss";
-@import "blocks/main/cruise/cruise.scss";
+.services {
+  min-height: 960px;
+  background-color: #041827;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.services__wrapper {
+  width: 63.5vw;
+  height: 100%;
+  padding-top: 70px;
+}
+
+.services__wrapper h2,
+.services__mobile-title h2 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 50px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: #ffffff;
+}
+
+.services__mobile-title h2 {
+  display: none;
+}
+
+.services__wrapper ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.services__wrapper li {
+  width: 30%;
+  min-height: 650px;
+  padding: 0;
+  margin: 0;
+  margin-right: 86px;
+}
+
+.services__wrapper li:last-child {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.services__wrapper a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.services__wrapper a:hover {
+  opacity: 0.7;
+}
+
+.services__wrapper a:active {
+  opacity: 0.3;
+}
+
+.services__card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.services__card h3 {
+  position: absolute;
+  top: 50px;
+  left: 40px;
+  z-index: 1;
+  width: 45%;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.services__card img {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.services__card button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  margin: 0;
+  background-color: #00b2ff;
+  border-radius: 3px 0 0 0;
+  cursor: pointer;
+}
+
+.services__card button::after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: right center 0;
+  -ms-transform-origin: right center 0;
+  transform-origin: right center 0;
+  position: absolute;
+  content: "";
+  top: 30px;
+  right: 20px;
+  width: 10px;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.services__card button::before {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: right center 0;
+  -ms-transform-origin: right center 0;
+  transform-origin: right center 0;
+  position: absolute;
+  content: "";
+  top: 30px;
+  right: 20px;
+  width: 10px;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+/*@import "blocks/main/cruise/cruise.scss";
 @import "blocks/main/booking/booking.scss";
 @import "blocks/main/form/form.scss";
 @import "blocks/main/contacts/contacts.scss";
@@ -1316,6 +1466,7 @@ img {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 0;
     min-height: 100px;
     padding: 20px 0;
   }
@@ -1430,6 +1581,51 @@ img {
 
   .about__button {
     margin-top: 0;
+  }
+
+  .services {
+    min-height: 1080px;
+  }
+
+  .services__wrapper {
+    padding-top: 65px;
+  }
+
+  .services__wrapper h2,
+  .services__mobile-title h2 {
+    margin-bottom: 35px;
+  }
+
+  .services__wrapper ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .services__wrapper li {
+    width: 100%;
+    min-height: 250px;
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+
+  .services__wrapper a {
+    min-height: 250px;
+  }
+
+  .services__card {
+    min-height: 250px;
+  }
+
+  .services__card h3 {
+    top: 35px;
+    left: 43px;
+    width: 20%;
+  }
+
+  .services__card img {
+    min-height: 250px;
   }
 
   .footer__wrapper {
@@ -1619,6 +1815,11 @@ img {
     min-height: 190px;
   }
 
+  .about {
+    min-height: 305px;
+    margin-bottom: 80px;
+  }
+
   .about__image {
     display: none;
   }
@@ -1648,6 +1849,53 @@ img {
   .about__button-text {
     font-size: 14px;
     line-height: 16px;
+  }
+
+  .services {
+    min-height: 1050px;
+  }
+
+  .services__wrapper {
+    padding-top: 48px;
+  }
+
+  .services__wrapper h2,
+  .services__mobile-title h2 {
+    display: none;
+  }
+
+  .services__mobile-title h2 {
+    display: block;
+    width: 90%;
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .services__wrapper li {
+    margin-bottom: 23px;
+  }
+
+  .services__card h3 {
+    top: 25px;
+    left: 30px;
+    width: 50%;
+    font-size: 18px;
+  }
+
+  .services__card button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .services__card button::after {
+    top: 15px;
+    right: 15px;
+  }
+
+  .services__card button::before {
+    top: 15px;
+    right: 15px;
   }
 
   .footer__wrapper {
