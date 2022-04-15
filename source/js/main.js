@@ -5,11 +5,22 @@ import {aboutBlock, aboutButton, showDescription} from './modules/description/de
 import {anchor, toSlide} from './modules/smooth-scroll/smooth-scroll.js';
 import {form, formSend} from './modules/form-validation/form-validation.js';
 import {buttonOpenPopup, showModal} from './modules/modal-popup/modal-popup.js';
+import {phoneInputs, onPhoneKeyDown, onPhoneInput, onPhonePaste} from './modules/mask-input-phone/mask-input-phone.js';
 
 // ---------------------------------
 window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
+  // Маска для поля ввода телефона
+  for (let i = 0; i < phoneInputs.length; i++) {
+    const input = phoneInputs[i];
+    input.addEventListener('keydown', onPhoneKeyDown);
+    input.addEventListener('input', onPhoneInput/* , false*/);
+    input.addEventListener('paste', onPhonePaste/* , false*/);
+  }
+  // ///
+
+
   // Модальное окно
   buttonOpenPopup.addEventListener('click', showModal);
 

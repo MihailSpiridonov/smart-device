@@ -13,11 +13,6 @@ function formRemoveError(input) {
   input.classList.remove('error');
 }
 
-// Test email
-function emailTest(input) {
-  return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
-}
-
 
 function formValidate(element) {
   let error = 0;
@@ -27,12 +22,7 @@ function formValidate(element) {
     for (let i = 0; i < formRequired.length; i++) {
       formRemoveError(formRequired[i]);
 
-      if (formRequired[i].getAttribute('type') === 'email') {
-        if (emailTest(formRequired[i])) {
-          formAddError(formRequired[i]);
-          error++;
-        }
-      } else if (formRequired[i].getAttribute('type') === 'checkbox' && formRequired[i].checked === false) {
+      if (formRequired[i].getAttribute('type') === 'checkbox' && formRequired[i].checked === false) {
         formAddError(formRequired[i]);
         error++;
       } else {

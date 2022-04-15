@@ -1,7 +1,12 @@
 .form form {
   display: flex;
   flex-direction: column;
-  max-width: 100%;
+  width: 100%;
+  max-width: 585px;
+
+  @media (max-width: $tablet-width) {
+    max-width: 100%;
+  }
 }
 
 .form__wrapper-title {

@@ -204,7 +204,7 @@
                         mobile 1х: 270px; 2x: 540px; -->
                     <img src="img/content/card-production_bg_desctop.jpg" srcset="img/content/card-production_bg_desctop_2x.jpg 2x" width="350" height="650" alt="Изображение печатной платы">
                   </picture>
-                  <button tabindex="-1"></button>
+                  <div class="services__icon-card"></div>
                 </div>
               </a>
             </li>
@@ -225,7 +225,7 @@
                         mobile 1х: 270px; 2x: 540px; -->
                     <img src="img/content/card-mounting_bg_desctop.jpg" srcset="img/content/card-mounting_bg_desctop_2x.jpg 2x" width="350" height="650" alt="Изображение печатной платы">
                   </picture>
-                  <button tabindex="-1"></button>
+                  <div class="services__icon-card"></div>
                 </div>
               </a>
             </li>
@@ -246,7 +246,7 @@
                         mobile 1х: 270px; 2x: 540px; -->
                     <img src="img/content/card-spares_bg_desctop.jpg" srcset="img/content/card-spares_bg_desctop_2x.jpg 2x" width="350" height="650" alt="Изображение печатной платы">
                   </picture>
-                  <button tabindex="-1"></button>
+                  <div class="services__icon-card"></div>
                 </div>
               </a>
             </li>
@@ -280,7 +280,7 @@
                   <input type="text" name="name" placeholder="Имя" required>
                 </label>
                 <label>
-                  <input type="tel" name="phone" placeholder="Телефон" pattern="^[ 0-9]+$" required>
+                  <input type="tel" name="phone" placeholder="Телефон" minlength="10" maxlength="18" data-input-phone required>
                 </label>
               </div>
               <div class="form__textarea">
@@ -317,10 +317,10 @@
             </div>
             <div class="popup__wrapper-label">
               <label>
-                <input type="text" name="name" placeholder="Имя" required>
+                <input type="text" name="name" placeholder="Имя" data-popup-name required>
               </label>
               <label>
-                <input type="tel" name="phone" placeholder="Телефон" pattern="^[ 0-9]+$" required>
+                <input type="tel" name="phone" placeholder="Телефон" minlength="10" maxlength="18" data-input-phone required>
               </label>
             </div>
             <div class="popup__textarea">

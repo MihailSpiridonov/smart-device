@@ -1,6 +1,7 @@
 const buttonOpenPopup = document.querySelector('[data-popup-open]');
 const modalPopup = document.querySelector('[data-popup]');
 const modalPopupClose = modalPopup.querySelector('[data-popup-close]');
+const inputNamePopup = document.querySelector('[data-popup-name]');
 const body = document.querySelector('[data-body]');
 
 
@@ -8,6 +9,7 @@ const body = document.querySelector('[data-body]');
 function showModal() {
   modalPopup.classList.remove('popup--close');
   modalPopup.classList.add('popup--open');
+  inputNamePopup.focus();
   body.classList.add('page__body--overlay');
   document.addEventListener('keydown', hideModalESC);
   modalPopupClose.addEventListener('click', hideModal);

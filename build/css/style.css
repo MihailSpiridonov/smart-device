@@ -486,6 +486,7 @@ img {
 .wrapper {
   min-width: 1024px;
   width: 60.4vw;
+  max-width: 1920px;
   padding: 0;
   margin: 0 auto;
 }
@@ -672,12 +673,15 @@ img {
   left: 0;
   z-index: -1;
   width: 100%;
-  height: 100%;
+  max-height: 100%;
   background-color: #212d36;
+  overflow: hidden;
 }
 
 .main-block__image img {
   width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .main-block__wrapper-text {
@@ -870,6 +874,7 @@ img {
   padding-left: 50px;
   margin: 0;
   margin-right: 100px;
+  overflow: hidden;
 }
 
 .about__image img {
@@ -877,7 +882,9 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 
 .about__description-wrapper {
@@ -1117,7 +1124,7 @@ img {
   margin: 0;
 }
 
-.services__card button {
+.services__icon-card {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -1130,7 +1137,7 @@ img {
   cursor: pointer;
 }
 
-.services__card button::after {
+.services__icon-card::after {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
@@ -1146,7 +1153,7 @@ img {
   background-color: #ffffff;
 }
 
-.services__card button::before {
+.services__icon-card::before {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -1219,7 +1226,8 @@ img {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  max-width: 100%;
+  width: 100%;
+  max-width: 585px;
 }
 
 .form__wrapper-title {
@@ -2282,6 +2290,10 @@ img {
     width: 100%;
   }
 
+  .form form {
+    max-width: 100%;
+  }
+
   .form__wrapper-title {
     margin-bottom: 25px;
   }
@@ -2468,14 +2480,6 @@ img {
     margin-bottom: 50px;
   }
 
-  .main-block__image {
-    height: 560px;
-  }
-
-  .main-block__image img {
-    height: 560px;
-  }
-
   .main-block__wrapper-text {
     padding-top: 150px;
   }
@@ -2622,17 +2626,17 @@ img {
     font-size: 18px;
   }
 
-  .services__card button {
+  .services__icon-card {
     width: 40px;
     height: 40px;
   }
 
-  .services__card button::after {
+  .services__icon-card::after {
     top: 15px;
     right: 15px;
   }
 
-  .services__card button::before {
+  .services__icon-card::before {
     top: 15px;
     right: 15px;
   }
@@ -2782,6 +2786,7 @@ img {
 
   .footer__group--close ul {
     height: 0;
+    padding-top: 0;
     overflow: hidden;
     opacity: 0;
     -webkit-transition: all 1s ease;
