@@ -166,7 +166,7 @@
   display: none;
 }
 
-.about__button-text {
+.about__button span {
   font-family: $roboto;
   font-weight: 700;
   font-size: 14px;
@@ -181,7 +181,7 @@
   }
 }
 
-.about__button-text--close {
+.about__button span:last-child {
   width: 0;
   height: 0;
   overflow: hidden;
@@ -189,14 +189,14 @@
   transition: all 2s ease;
 }
 
-.about__description-wrapper--max .about__button-text--close {
+.about__description-wrapper--max span:last-child {
   width: auto;
   height: auto;
   overflow: visible;
   opacity: 1;
 }
 
-.about__button-text--open {
+.about__button span:first-child {
   width: auto;
   height: auto;
   overflow: visible;
@@ -204,7 +204,7 @@
   transition: all 2s ease;
 }
 
-.about__description-wrapper--max .about__button-text--open {
+.about__description-wrapper--max span:first-child {
   width: 0;
   height: 0;
   overflow: hidden;

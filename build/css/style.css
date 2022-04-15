@@ -673,6 +673,7 @@ img {
   left: 0;
   z-index: -1;
   width: 100%;
+  height: 100%;
   max-height: 100%;
   background-color: #212d36;
   overflow: hidden;
@@ -680,6 +681,7 @@ img {
 
 .main-block__image img {
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -746,7 +748,7 @@ img {
   opacity: 0.3;
 }
 
-.main-block__link {
+.main-block__wrapper-text span {
   padding: 0;
   margin: 0;
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -759,11 +761,11 @@ img {
   color: #f2f5f7;
 }
 
-.main-block__link--descktop {
+.main-block__wrapper-text span:first-child {
   display: block;
 }
 
-.main-block__link--mobile {
+.main-block__wrapper-text span:last-child {
   display: none;
 }
 
@@ -974,7 +976,7 @@ img {
   display: none;
 }
 
-.about__button-text {
+.about__button span {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 14px;
@@ -984,7 +986,7 @@ img {
   color: #00b2ff;
 }
 
-.about__button-text--close {
+.about__button span:last-child {
   width: 0;
   height: 0;
   overflow: hidden;
@@ -994,14 +996,14 @@ img {
   transition: all 2s ease;
 }
 
-.about__description-wrapper--max .about__button-text--close {
+.about__description-wrapper--max span:last-child {
   width: auto;
   height: auto;
   overflow: visible;
   opacity: 1;
 }
 
-.about__button-text--open {
+.about__button span:first-child {
   width: auto;
   height: auto;
   overflow: visible;
@@ -1011,7 +1013,7 @@ img {
   transition: all 2s ease;
 }
 
-.about__description-wrapper--max .about__button-text--open {
+.about__description-wrapper--max span:first-child {
   width: 0;
   height: 0;
   overflow: hidden;
@@ -2505,16 +2507,16 @@ img {
     line-height: 16px;
   }
 
-  .main-block__link {
+  .main-block__wrapper-text span {
     font-size: 14px;
     line-height: 16px;
   }
 
-  .main-block__link--descktop {
+  .main-block__wrapper-text span:first-child {
     display: none;
   }
 
-  .main-block__link--mobile {
+  .main-block__wrapper-text span:last-child {
     display: block;
   }
 
@@ -2589,7 +2591,7 @@ img {
     min-height: 35px;
   }
 
-  .about__button-text {
+  .about__button span {
     font-size: 14px;
     line-height: 16px;
   }
