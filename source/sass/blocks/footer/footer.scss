@@ -52,3 +52,23 @@
     margin-bottom: 10px;
   }
 }
+
+.footer__wrapper-accordion {
+  @media (max-width: $mobile-width) {
+    width: 100vw;
+    padding: 22px;
+    padding-left: 9.5%;
+    margin-left: -9.5%;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 1s ease;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}

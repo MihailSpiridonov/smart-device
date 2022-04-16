@@ -822,6 +822,10 @@ img {
   background-color: #00b2ff;
 }
 
+.advantages__card:active {
+  opacity: 0.5;
+}
+
 .advantages__card svg {
   width: 35px;
   height: 35px;
@@ -1739,6 +1743,128 @@ img {
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
+}
+
+.page-for-link {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-line-pack: start;
+  align-content: start;
+  min-width: 320px;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.page-for-link header {
+  position: static;
+  width: 100%;
+  min-height: 100px;
+  padding: 50px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  background-color: #041827;
+}
+
+.page-for-link main {
+  width: 100%;
+  margin: auto;
+  margin-top: 0;
+}
+
+.page-for-link section {
+  width: 85%;
+  padding: 20px;
+  margin: 0 auto;
+  margin-bottom: 200px;
+  background-color: #00b2ff;
+  border: 2px solid #041827;
+  border-radius: 10px;
+}
+
+.page-for-link h1,
+.page-for-link h2,
+.page-for-link p,
+.page-for-link a {
+  width: 85%;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 75px;
+  letter-spacing: 0.07em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #f2f5f7;
+}
+
+.page-for-link h2 {
+  font-size: 44px;
+  line-height: 55px;
+  margin-bottom: 30px;
+}
+
+.page-for-link p {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 10px;
+}
+
+.page-for-link ol {
+  list-style: none;
+}
+
+.page-for-link li {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 10px;
+}
+
+.page-for-link a {
+  display: block;
+  width: 40%;
+  padding: 20px;
+  background-color: #041827;
+  border: 2px solid #f2f5f7;
+  border-radius: 5px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #f2f5f7;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.page-for-link a:hover {
+  opacity: 0.7;
+}
+
+.page-for-link a:active {
+  opacity: 0.3;
+}
+
+.page-for-link footer {
+  width: 100%;
+  min-height: 100px;
+  padding: 50px;
+  margin: auto;
+  margin-bottom: 0;
+  background-color: #041827;
 }
 
 .popup {
@@ -2749,6 +2875,27 @@ img {
     margin-bottom: 10px;
   }
 
+  .footer__wrapper-accordion {
+    width: 100vw;
+    padding: 22px;
+    padding-left: 9.5%;
+    margin-left: -9.5%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+
+  .footer__wrapper-accordion:hover {
+    opacity: 0.6;
+  }
+
+  .footer__wrapper-accordion:active {
+    opacity: 0.3;
+  }
+
   .socials {
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
@@ -2758,7 +2905,7 @@ img {
   .site-sections {
     position: relative;
     width: 100%;
-    padding: 22px 0;
+    padding: 0;
     margin: 0 auto;
   }
 
@@ -2819,8 +2966,7 @@ img {
   .contacts {
     position: relative;
     width: 100%;
-    padding: 22px 0;
-    padding-bottom: 10px;
+    padding: 0;
     margin: 0 auto;
   }
 
@@ -2846,6 +2992,10 @@ img {
     background-color: rgba(248, 253, 255, 0.7);
   }
 
+  .contacts h3 {
+    margin: 0;
+  }
+
   .contacts__wrapper {
     -webkit-transition: all 1s ease;
     -o-transition: all 1s ease;
@@ -2854,12 +3004,14 @@ img {
 
   .footer__group--open .contacts__wrapper {
     height: auto;
+    padding-bottom: 7px;
     overflow: visible;
     opacity: 1;
   }
 
   .footer__group--close .contacts__wrapper {
     height: 0;
+    padding-bottom: 0;
     overflow: hidden;
     opacity: 0;
     -webkit-transition: all 1s ease;

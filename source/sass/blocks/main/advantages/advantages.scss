@@ -66,6 +66,14 @@
   box-sizing: border-box;
   transition: all 0.5s ease;
 
+  &:hover {
+    background-color: $background-blue--light;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
   @media (max-width: $tablet-width) {
     padding-left: 40px;
     padding-bottom: 30px;
@@ -76,10 +84,6 @@
     padding-left: 25px;
     padding-bottom: 35px;
   }
-}
-
-.advantages__card:hover {
-  background-color: $background-blue--light;
 }
 
 .advantages__card svg {
