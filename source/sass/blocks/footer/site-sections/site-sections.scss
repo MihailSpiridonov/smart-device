@@ -49,6 +49,7 @@
   margin: 0;
   margin-bottom: 20px;
   font-family: $roboto;
+  font-weight: 400;
   font-size: 15px;
   line-height: 16px;
   letter-spacing: 0.05em;
@@ -127,5 +128,10 @@
 
   &:active {
     opacity: 0.2;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 14px;
+    line-height: 19px;
   }
 }

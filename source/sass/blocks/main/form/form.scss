@@ -198,6 +198,7 @@
   min-width: 265px;
   min-height: 45px;
   padding: 0;
+  padding-top: 5px;
   margin: 0;
   margin-right: 50px;
   background-color: $dark-blue;
@@ -212,6 +213,7 @@
   text-transform: uppercase;
   color: $text-white-absolute;
   box-sizing: border-box;
+  box-shadow: none;
   cursor: pointer;
   transition: all 0.5s ease;
 
@@ -243,7 +245,7 @@
 .form span {
   display: block;
   padding: 0;
-  padding-top: 13px;
+  padding-top: 17px;
   padding-left: 25px;
   margin: 0;
   font-family: $pt-mono;

@@ -599,6 +599,7 @@ img {
   min-width: 480px;
   padding: 0;
   padding-top: 15px;
+  padding-right: 7px;
   margin: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -805,7 +806,7 @@ img {
 .advantages__card {
   width: 100%;
   height: 100%;
-  padding: 40px 45px;
+  padding: 40px 41px;
   margin: 0;
   border: 1px solid #ebebeb;
   border-left: 5px solid #00b2ff;
@@ -835,8 +836,9 @@ img {
 .advantages__card h3 {
   padding: 0;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
   font-size: 24px;
   line-height: 34px;
   color: #00b2ff;
@@ -875,13 +877,13 @@ img {
   padding: 0;
   padding-left: 50px;
   margin: 0;
-  margin-right: 100px;
+  margin-right: 95px;
   overflow: hidden;
 }
 
 .about__image img {
   position: absolute;
-  top: 0;
+  top: 5px;
   left: 0;
   width: 100%;
   max-height: 100%;
@@ -898,8 +900,9 @@ img {
 .about__description-wrapper h3 {
   padding: 0;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
   font-size: 36px;
   line-height: 51px;
   color: #041827;
@@ -950,7 +953,7 @@ img {
   width: 180px;
   min-height: 45px;
   margin: 0;
-  margin-top: 15px;
+  margin-top: 20px;
   background: none;
   border: 1px solid #00b2ff;
   border-radius: 3px;
@@ -1110,6 +1113,7 @@ img {
   padding: 0;
   margin: 0;
   font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
   font-size: 20px;
   line-height: 30px;
   color: #ffffff;
@@ -1149,9 +1153,9 @@ img {
   position: absolute;
   content: "";
   top: 30px;
-  right: 20px;
-  width: 10px;
-  height: 2px;
+  right: 27px;
+  width: 5px;
+  height: 1px;
   background-color: #ffffff;
 }
 
@@ -1165,9 +1169,9 @@ img {
   position: absolute;
   content: "";
   top: 30px;
-  right: 20px;
-  width: 10px;
-  height: 2px;
+  right: 27px;
+  width: 5px;
+  height: 1px;
   background-color: #ffffff;
 }
 
@@ -1402,6 +1406,7 @@ img {
   min-width: 265px;
   min-height: 45px;
   padding: 0;
+  padding-top: 5px;
   margin: 0;
   margin-right: 50px;
   background-color: #041827;
@@ -1417,6 +1422,8 @@ img {
   color: #ffffff;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-box-shadow: none;
+  box-shadow: none;
   cursor: pointer;
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -1438,7 +1445,7 @@ img {
 .form span {
   display: block;
   padding: 0;
-  padding-top: 13px;
+  padding-top: 17px;
   padding-left: 25px;
   margin: 0;
   font-family: "PT Mono", "Courier New", monospace;
@@ -1584,6 +1591,7 @@ img {
   margin: 0;
   margin-bottom: 20px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
   font-size: 15px;
   line-height: 16px;
   letter-spacing: 0.05em;
@@ -1638,6 +1646,7 @@ img {
 .contacts {
   padding: 0;
   padding-top: 5px;
+  padding-left: 20px;
   margin: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1648,6 +1657,7 @@ img {
   margin: 0;
   margin-bottom: 20px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
   font-size: 15px;
   line-height: 16px;
   letter-spacing: 0.05em;
@@ -1676,7 +1686,7 @@ img {
   width: 90%;
   padding: 0;
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-family: "PT Mono", "Courier New", monospace;
   font-size: 16px;
   line-height: 22px;
@@ -1684,7 +1694,6 @@ img {
 }
 
 .contacts a {
-  margin-bottom: 5px;
   line-height: 25px;
   cursor: pointer;
   -webkit-transition: all 0.5s ease;
@@ -1765,8 +1774,8 @@ img {
 .popup__close {
   position: absolute;
   content: "";
-  top: 40px;
-  right: 20px;
+  top: 25px;
+  right: 15px;
   width: 25px;
   height: 25px;
   background: none;
@@ -1831,7 +1840,7 @@ img {
   max-width: 100%;
   padding: 0;
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: 5px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
   font-size: 30px;
@@ -1930,7 +1939,7 @@ img {
 .popup__textarea {
   padding: 0;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -1995,7 +2004,9 @@ img {
   width: 100%;
   min-height: 45px;
   padding: 0;
+  padding-top: 5px;
   margin: 0;
+  margin-bottom: 10px;
   background-color: #041827;
   border: none;
   border-radius: 3px;
@@ -2033,6 +2044,7 @@ img {
   padding-top: 13px;
   padding-left: 25px;
   margin: 0;
+  margin-left: 10px;
   font-family: "PT Mono", "Courier New", monospace;
   font-weight: 400;
   font-size: 14px;
@@ -2063,7 +2075,7 @@ img {
   position: absolute;
   content: "";
   top: 13px;
-  left: 0;
+  left: 8px;
   width: 13px;
   height: 13px;
   border: 1px solid #ffffff;
@@ -2074,7 +2086,7 @@ img {
   position: absolute;
   content: "";
   top: 16px;
-  left: 4px;
+  left: 11px;
   width: 12px;
   height: 8px;
   background-repeat: no-repeat;
@@ -2128,6 +2140,7 @@ img {
   .nav {
     min-width: 100px;
     padding-top: 10px;
+    padding-right: 0;
   }
 
   .nav ul {
@@ -2198,7 +2211,7 @@ img {
   .about {
     width: 87vw;
     min-height: 380px;
-    margin-bottom: 75px;
+    margin-bottom: 80px;
   }
 
   .about__image {
@@ -2208,6 +2221,7 @@ img {
   }
 
   .about__image img {
+    top: 0;
     padding-top: 5px;
   }
 
@@ -2232,7 +2246,7 @@ img {
   }
 
   .services__wrapper {
-    padding-top: 65px;
+    padding-top: 60px;
   }
 
   .services__wrapper h2,
@@ -2537,6 +2551,7 @@ img {
 
   .advantages__card {
     padding: 30px;
+    padding-left: 25px;
     padding-bottom: 35px;
   }
 
@@ -2727,11 +2742,11 @@ img {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    margin-bottom: 15px;
+    margin-bottom: 17px;
   }
 
   .footer__logo {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 
   .socials {
@@ -2796,6 +2811,11 @@ img {
     transition: all 1s ease;
   }
 
+  .site-sections a {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
   .contacts {
     position: relative;
     width: 100%;
@@ -2845,6 +2865,19 @@ img {
     -webkit-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease;
+  }
+
+  .contacts p,
+  .contacts a {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 16px;
+  }
+
+  .contacts a {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 11px;
   }
 
   .accordion {
@@ -2924,5 +2957,12 @@ img {
 
   .popup__wrapper-submit-and-checkbox input:checked + label::before {
     left: 8px;
+  }
+}
+
+@media (width: 1920px) {
+  .popup__wrapper {
+    margin-top: 3%;
+    margin-right: 1%;
   }
 }

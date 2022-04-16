@@ -18,7 +18,7 @@
   padding-top: 70px;
 
   @media (max-width: $tablet-width) {
-    padding-top: 65px;
+    padding-top: 60px;
   }
 
   @media (max-width: $mobile-width) {
@@ -138,6 +138,7 @@
   padding: 0;
   margin: 0;
   font-family: $roboto;
+  font-weight: 400;
   font-size: 20px;
   line-height: 30px;
   color: $text-white-absolute;
@@ -189,9 +190,9 @@
     position: absolute;
     content: "";
     top: 30px;
-    right: 20px;
-    width: 10px;
-    height: 2px;
+    right: 27px;
+    width: 5px;
+    height: 1px;
     background-color: $text-white-absolute;
   }
 
@@ -201,9 +202,9 @@
     position: absolute;
     content: "";
     top: 30px;
-    right: 20px;
-    width: 10px;
-    height: 2px;
+    right: 27px;
+    width: 5px;
+    height: 1px;
     background-color: $text-white-absolute;
   }
 
