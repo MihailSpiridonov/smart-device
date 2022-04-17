@@ -304,40 +304,40 @@
 <!-- form end -->
 <!-- main end --><!-- popup start -->
 
-      <aside class="popup popup--close" data-popup>
-        <div class="popup__wrapper" id="show-popup">
-          <form action="https://echo.htmlacademy.ru/" method="get" name="your question" data-form-popup>
-            <div class="popup__close" data-popup-close>
-              <div class="popup__line popup__line--1"></div>
-              <div class="popup__line popup__line--2"></div>
-            </div>
-            <div class="popup__wrapper-title">
-              <h2>Закажите звонок</h2>
-              <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
-            </div>
-            <div class="popup__wrapper-label">
-              <label>
-                <input type="text" name="name" placeholder="Имя" data-popup-name required>
-              </label>
-              <label>
-                <input type="tel" name="phone" placeholder="Телефон" minlength="10" maxlength="18" data-input-phone required>
-              </label>
-            </div>
-            <div class="popup__textarea">
-              <label>
-                <textarea name="question" placeholder="Ваш вопрос"></textarea>
-              </label>
-            </div>
-            <div class="popup__wrapper-submit-and-checkbox">
-              <button type="submit">Отправить</button>
-              <input id="checkbox-popup" type="checkbox" name="checkbox" required>
-              <label for="checkbox-popup">
-                <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
-              </label>
-            </div>
-          </form>
-        </div>
-      </aside>
+    <aside class="popup popup--close" data-popup tabindex="0">
+      <div class="popup__wrapper" id="show-popup">
+        <form action="https://echo.htmlacademy.ru/" method="get" name="your question" data-form-popup>
+          <button class="popup__close" aria-label="Кнопка закрытия Всплывающего окна" data-popup-close>
+            <div class="popup__line popup__line--1"></div>
+            <div class="popup__line popup__line--2"></div>
+          </button>
+          <div class="popup__wrapper-title">
+            <h2>Закажите звонок</h2>
+            <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
+          </div>
+          <div class="popup__wrapper-label">
+            <label>
+              <input type="text" name="name" placeholder="Имя" data-popup-name required>
+            </label>
+            <label>
+              <input type="tel" name="phone" placeholder="Телефон" minlength="10" maxlength="18" data-input-phone required>
+            </label>
+          </div>
+          <div class="popup__textarea">
+            <label>
+              <textarea name="question" placeholder="Ваш вопрос"></textarea>
+            </label>
+          </div>
+          <div class="popup__wrapper-submit-and-checkbox">
+            <button type="submit">Отправить</button>
+            <input id="checkbox-popup" type="checkbox" name="checkbox" required>
+            <label for="checkbox-popup" tabindex="0">
+              <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
+            </label>
+          </div>
+        </form>
+      </div>
+    </aside>
 
 <!-- popup end -->
 
@@ -438,4 +438,5 @@
     </footer>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
+  </body>
 </html>

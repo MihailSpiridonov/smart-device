@@ -1745,128 +1745,6 @@ img {
   transition: all 0.5s;
 }
 
-.page-for-link {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -ms-flex-line-pack: start;
-  align-content: start;
-  min-width: 320px;
-  width: 100vw;
-  height: 100vh;
-  padding: 0;
-  margin: 0;
-  overflow-x: hidden;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.page-for-link header {
-  position: static;
-  width: 100%;
-  min-height: 100px;
-  padding: 50px;
-  margin: 0 auto;
-  margin-bottom: 100px;
-  background-color: #041827;
-}
-
-.page-for-link main {
-  width: 100%;
-  margin: auto;
-  margin-top: 0;
-}
-
-.page-for-link section {
-  width: 85%;
-  padding: 20px;
-  margin: 0 auto;
-  margin-bottom: 200px;
-  background-color: #00b2ff;
-  border: 2px solid #041827;
-  border-radius: 10px;
-}
-
-.page-for-link h1,
-.page-for-link h2,
-.page-for-link p,
-.page-for-link a {
-  width: 85%;
-  padding: 0;
-  margin: 0 auto;
-  margin-bottom: 60px;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 75px;
-  letter-spacing: 0.07em;
-  text-align: center;
-  text-transform: uppercase;
-  color: #f2f5f7;
-}
-
-.page-for-link h2 {
-  font-size: 44px;
-  line-height: 55px;
-  margin-bottom: 30px;
-}
-
-.page-for-link p {
-  font-size: 24px;
-  line-height: 32px;
-  margin-bottom: 10px;
-}
-
-.page-for-link ol {
-  list-style: none;
-}
-
-.page-for-link li {
-  font-size: 24px;
-  line-height: 32px;
-  margin-bottom: 10px;
-}
-
-.page-for-link a {
-  display: block;
-  width: 40%;
-  padding: 20px;
-  background-color: #041827;
-  border: 2px solid #f2f5f7;
-  border-radius: 5px;
-  font-size: 18px;
-  line-height: 24px;
-  color: #f2f5f7;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.page-for-link a:hover {
-  opacity: 0.7;
-}
-
-.page-for-link a:active {
-  opacity: 0.3;
-}
-
-.page-for-link footer {
-  width: 100%;
-  min-height: 100px;
-  padding: 50px;
-  margin: auto;
-  margin-bottom: 0;
-  background-color: #041827;
-}
-
 .popup {
   position: fixed;
   -webkit-box-pack: center;
@@ -1904,7 +1782,11 @@ img {
   right: 15px;
   width: 25px;
   height: 25px;
+  padding-left: 10px;
   background: none;
+  border: none;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
   cursor: pointer;
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -2126,7 +2008,7 @@ img {
   box-sizing: border-box;
 }
 
-.popup button {
+.popup__wrapper-submit-and-checkbox button {
   width: 100%;
   min-height: 45px;
   padding: 0;
@@ -2152,11 +2034,11 @@ img {
   transition: all 0.5s ease;
 }
 
-.popup button:hover {
+.popup__wrapper-submit-and-checkbox button:hover {
   opacity: 0.7;
 }
 
-.popup button:active {
+.popup__wrapper-submit-and-checkbox button:active {
   opacity: 0.3;
 }
 
@@ -2166,8 +2048,7 @@ img {
 
 .popup span {
   display: block;
-  padding: 0;
-  padding-top: 13px;
+  padding: 13px 0;
   padding-left: 25px;
   margin: 0;
   margin-left: 10px;
@@ -2229,6 +2110,128 @@ img {
   background-color: #ffcccc;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.page-for-link {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-line-pack: start;
+  align-content: start;
+  min-width: 320px;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.page-for-link header {
+  position: static;
+  width: 100%;
+  min-height: 100px;
+  padding: 50px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  background-color: #041827;
+}
+
+.page-for-link main {
+  width: 100%;
+  margin: auto;
+  margin-top: 0;
+}
+
+.page-for-link section {
+  width: 85%;
+  padding: 20px;
+  margin: 0 auto;
+  margin-bottom: 200px;
+  background-color: #00b2ff;
+  border: 2px solid #041827;
+  border-radius: 10px;
+}
+
+.page-for-link h1,
+.page-for-link h2,
+.page-for-link p,
+.page-for-link a {
+  width: 85%;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 75px;
+  letter-spacing: 0.07em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #f2f5f7;
+}
+
+.page-for-link h2 {
+  font-size: 44px;
+  line-height: 55px;
+  margin-bottom: 30px;
+}
+
+.page-for-link p {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 10px;
+}
+
+.page-for-link ol {
+  list-style: none;
+}
+
+.page-for-link li {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 10px;
+}
+
+.page-for-link a {
+  display: block;
+  width: 40%;
+  padding: 20px;
+  background-color: #041827;
+  border: 2px solid #f2f5f7;
+  border-radius: 5px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #f2f5f7;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.page-for-link a:hover {
+  opacity: 0.7;
+}
+
+.page-for-link a:active {
+  opacity: 0.3;
+}
+
+.page-for-link footer {
+  width: 100%;
+  min-height: 100px;
+  padding: 50px;
+  margin: auto;
+  margin-bottom: 0;
+  background-color: #041827;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
@@ -2564,7 +2567,7 @@ img {
     padding-top: 30px;
   }
 
-  .popup button {
+  .popup__wrapper-submit-and-checkbox button {
     width: 40%;
     margin-right: 85px;
   }
@@ -3052,12 +3055,12 @@ img {
   }
 
   .popup__wrapper {
-    width: 90%;
+    width: 80%;
     min-height: 310px;
   }
 
   .popup form {
-    padding: 10px;
+    padding: 25px;
   }
 
   .popup__wrapper-title {
@@ -3096,7 +3099,7 @@ img {
     min-height: 130px;
   }
 
-  .popup button {
+  .popup__wrapper-submit-and-checkbox button {
     width: 100%;
     padding-top: 3px;
     margin-right: 0;

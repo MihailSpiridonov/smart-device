@@ -31,7 +31,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    width: 90%;
+    width: 80%;
     min-height: 310px;
   }
 }
@@ -43,7 +43,10 @@
   right: 15px;
   width: 25px;
   height: 25px;
+  padding-left: 10px;
   background: none;
+  border: none;
+  box-sizing: content-box;
   cursor: pointer;
   transition: all 0.5s ease;
 
@@ -83,7 +86,7 @@
   border-radius: 3px;
 
   @media (max-width: $mobile-width) {
-    padding: 10px;
+    padding: 25px;
   }
 }
 
@@ -253,7 +256,7 @@
   box-sizing: border-box;
 }
 
-.popup button {
+.popup__wrapper-submit-and-checkbox button {
   width: 100%;
   min-height: 45px;
   padding: 0;
@@ -302,8 +305,7 @@
 
 .popup span {
   display: block;
-  padding: 0;
-  padding-top: 13px;
+  padding: 13px 0;
   padding-left: 25px;
   margin: 0;
   margin-left: 10px;
