@@ -1,4 +1,6 @@
 const form = document.querySelector('[data-form]');
+const formPopup = document.querySelector('[data-form-popup]');
+const MIN_LENGTH_INPUT = 18;
 
 
 // Add class
@@ -23,6 +25,9 @@ function formValidate(element) {
       formRemoveError(formRequired[i]);
 
       if (formRequired[i].getAttribute('type') === 'checkbox' && formRequired[i].checked === false) {
+        formAddError(formRequired[i]);
+        error++;
+      } else if (formRequired[i].getAttribute('type') === 'tel' && formRequired[i].value.length < MIN_LENGTH_INPUT) {
         formAddError(formRequired[i]);
         error++;
       } else {
@@ -52,4 +57,4 @@ function formSend(evt) {
 }
 
 
-export {form, formSend};
+export {form, formPopup, formSend};

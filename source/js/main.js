@@ -3,7 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {accordions, footer, hideActiveClass, hideNoActiveClass, openAccordion, closeAccordion} from './modules/accordion/accordion.js';
 import {aboutBlock, aboutButton, showDescription} from './modules/description/description.js';
 import {anchor, toSlide} from './modules/smooth-scroll/smooth-scroll.js';
-import {form, formSend} from './modules/form-validation/form-validation.js';
+import {form, formPopup, formSend} from './modules/form-validation/form-validation.js';
 import {buttonOpenPopup, showModal} from './modules/modal-popup/modal-popup.js';
 import {phoneInputs, onPhoneKeyDown, onPhoneInput, onPhonePaste} from './modules/mask-input-phone/mask-input-phone.js';
 
@@ -62,6 +62,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Form validation
   form.addEventListener('submit', formSend);
+  formPopup.addEventListener('submit', formSend);
 
 
   // ---------------------------------
