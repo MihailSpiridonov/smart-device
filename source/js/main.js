@@ -1,6 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import {accordions, footer, hideActiveClass, hideNoactiveClass, openAccordion, closeAccordion} from './modules/accordion/accordion.js';
+import {accordions, footer, hideActiveClass, hideNoActiveClass, openAccordion, closeAccordion} from './modules/accordion/accordion.js';
 import {aboutBlock, aboutButton, showDescription} from './modules/description/description.js';
 import {anchor, toSlide} from './modules/smooth-scroll/smooth-scroll.js';
 import {form, formSend} from './modules/form-validation/form-validation.js';
@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', () => {
         accordion.classList.add('footer__group--active');
         if (accordion.classList.contains('footer__group--active')) {
           if (accordion.classList.contains('footer__group--close')) {
-            hideNoactiveClass();
+            hideNoActiveClass();
             openAccordion(accordion);
           } else if (accordion.classList.contains('footer__group--open')) {
             accordion.classList.remove('footer__group--active');

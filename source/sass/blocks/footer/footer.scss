@@ -2,20 +2,22 @@
   display: flex;
   justify-content: space-between;
   width: 63.5vw;
-  padding-top: 55px;
   padding-bottom: 55px;
+
+  @media (max-width: $small-desktop-width) {
+    padding: 0 20px;
+  }
 
   @media (max-width: $tablet-width) {
     flex-wrap: wrap;
     width: 87vw;
-    padding-top: 55px;
+    padding: 0;
     padding-bottom: 65px;
   }
 
   @media (max-width: $mobile-width) {
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 38px;
   }
 }
 

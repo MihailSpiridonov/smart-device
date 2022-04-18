@@ -1,10 +1,9 @@
 // Viewports
 $desktop-width-popup: 1920px;
 $desktop-width-only: 1160px;
-//$small-desktop-width: 1064px;
+$small-desktop-width: 1064px;
 $tablet-width: 1023px;
 $mobile-width: 767px;
-//$small-mobile-width: 400px;
 
 // Fonts
 $roboto: "Roboto Condensed", "Arial", sans-serif;
@@ -14,6 +13,7 @@ $pt-mono: "PT Mono", "Courier New", monospace;
 $dark-blue: #041827;
 $background-header: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
 $background-blue: rgba(4, 24, 39, 0.5);
+$background-blue--darker: #0474a4;
 $background-blue--lighter: #00b3ff;
 $background-blue--light: #00b2ff;
 $input-background: rgba(4, 20, 39, 0.15);

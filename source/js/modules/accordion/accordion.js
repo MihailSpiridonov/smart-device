@@ -5,7 +5,7 @@ function hideActiveClass() {
   accordions.forEach((accordion) => accordion.classList.remove('footer__group--active'));
 }
 
-function hideNoactiveClass() {
+function hideNoActiveClass() {
   accordions.forEach((accordion) => accordion.classList.remove('footer__group--open'));
   accordions.forEach((accordion) => accordion.classList.add('footer__group--close'));
 }
@@ -20,4 +20,4 @@ function closeAccordion(accordion) {
   accordion.classList.add('footer__group--close');
 }
 
-export {accordions, footer, hideActiveClass, hideNoactiveClass, openAccordion, closeAccordion};
+export {accordions, footer, hideActiveClass, hideNoActiveClass, openAccordion, closeAccordion};

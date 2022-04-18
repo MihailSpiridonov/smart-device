@@ -1,28 +1,30 @@
 .services {
   min-height: 960px;
+  padding-top: 70px;
   background-color: $dark-blue;
   box-sizing: border-box;
 
   @media (max-width: $tablet-width) {
     min-height: 1080px;
+    padding-top: 55px;
   }
 
   @media (max-width: $mobile-width) {
     min-height: 1050px;
+    padding-top: 48px;
   }
 }
 
 .services__wrapper {
   width: 63.5vw;
   height: 100%;
-  padding-top: 70px;
 
-  @media (max-width: $tablet-width) {
-    padding-top: 60px;
+  @media (max-width: $small-desktop-width) {
+    padding: 0 20px;
   }
 
-  @media (max-width: $mobile-width) {
-    padding-top: 48px;
+  @media (max-width: $tablet-width) {
+    padding: 0;
   }
 }
 
@@ -72,6 +74,7 @@
 }
 
 .services__wrapper li {
+  z-index: 1;
   width: 30%;
   min-height: 650px;
   padding: 0;
@@ -87,11 +90,11 @@
     width: 100%;
     min-height: 250px;
     margin-right: 0;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 23px;
+    margin-bottom: 28px;
   }
 }
 
@@ -121,20 +124,27 @@
   position: relative;
   width: 100%;
   height: 100%;
-  padding: 0;
+  padding: 45px 0;
+  padding-left: 40px;
   margin: 0;
+  box-sizing: border-box;
 
   @media (max-width: $tablet-width) {
     min-height: 250px;
+    padding: 40px 0;
+    padding-left: 43px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 25px 0;
+    padding-left: 27px;
+    font-size: 18px;
   }
 }
 
 .services__card h3 {
-  position: absolute;
-  top: 50px;
-  left: 40px;
-  z-index: 1;
-  width: 45%;
+  z-index: 0;
+  width: 50%;
   padding: 0;
   margin: 0;
   font-family: $roboto;
@@ -144,28 +154,26 @@
   color: $text-white-absolute;
 
   @media (max-width: $tablet-width) {
-    top: 35px;
-    left: 43px;
-    width: 23%;
+    width: 24%;
+    padding-left: 3px;
   }
 
   @media (max-width: $mobile-width) {
-    top: 25px;
-    left: 30px;
-    width: 50%;
+    width: 55%;
     font-size: 18px;
   }
 }
 
 .services__card img {
   position: absolute;
-  z-index: 0;
+  z-index: -1;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   padding: 0;
   margin: 0;
+  background-color: #183044;
 
   @media (max-width: $tablet-width) {
     min-height: 250px;

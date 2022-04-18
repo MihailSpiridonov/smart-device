@@ -19,7 +19,7 @@
 
 .advantages ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(48.5%, 595px));
+  grid-template-columns: repeat(auto-fit, minmax(48.5%, 48.5%));
   grid-template-rows: 1fr;
   justify-content: center;
   gap: 30px;
@@ -27,6 +27,10 @@
   padding: 0;
   margin: 0;
   list-style: none;
+
+  @media (max-width: $small-desktop-width) {
+    grid-template-columns: repeat(auto-fit, minmax(45%, 45%));
+  }
 
   @media (max-width: $tablet-width) {
     grid-template-columns: repeat(auto-fit, minmax(47.7%, 320px));

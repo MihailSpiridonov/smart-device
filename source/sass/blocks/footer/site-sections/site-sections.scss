@@ -82,6 +82,7 @@
 .footer__group--open ul {
   @media (max-width: $mobile-width) {
     height: auto;
+    margin-bottom: 10px;
     overflow: visible;
     opacity: 1;
   }
