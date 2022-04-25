@@ -1,11 +1,13 @@
 .popup {
   position: fixed;
+  display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   z-index: 5;
   width: 100vw;
   height: 100vh;
   background-color: $color-overlay;
+  overflow-y: scroll;
 }
 
 .popup--open {
@@ -18,6 +20,7 @@
 
 .popup__wrapper {
   position: relative;
+  transform: translateY(20%);
   width: 500px;
   min-height: 610px;
 
@@ -359,7 +362,8 @@
   }
 }
 
-.popup__wrapper-submit-and-checkbox input:checked + label::before {
+.popup__wrapper-submit-and-checkbox input:checked + label::before,
+.popup__wrapper-submit-and-checkbox .label--checked::before {
   display: block;
   position: absolute;
   content: "";

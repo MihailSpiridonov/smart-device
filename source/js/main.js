@@ -3,7 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {accordions, footer, hideActiveClass, hideNoActiveClass, openAccordion, closeAccordion} from './modules/accordion/accordion.js';
 import {aboutBlock, aboutButton, showDescription} from './modules/description/description.js';
 import {anchor, toSlide} from './modules/smooth-scroll/smooth-scroll.js';
-import {form, formPopup, formSend} from './modules/form-validation/form-validation.js';
+import {form, formPopup, formSendPopup, formSendForm} from './modules/form-validation/form-validation.js';
 import {buttonOpenPopup, showModal} from './modules/modal-popup/modal-popup.js';
 import {phoneInputs, onPhoneKeyDown, onPhoneInput, onPhonePaste} from './modules/mask-input-phone/mask-input-phone.js';
 
@@ -15,10 +15,9 @@ window.addEventListener('DOMContentLoaded', () => {
   for (let i = 0; i < phoneInputs.length; i++) {
     const input = phoneInputs[i];
     input.addEventListener('keydown', onPhoneKeyDown);
-    input.addEventListener('input', onPhoneInput/* , false*/);
-    input.addEventListener('paste', onPhonePaste/* , false*/);
+    input.addEventListener('input', onPhoneInput);
+    input.addEventListener('paste', onPhonePaste);
   }
-  // ///
 
 
   // Модальное окно
@@ -47,6 +46,13 @@ window.addEventListener('DOMContentLoaded', () => {
           accordion.classList.remove('footer__group--open');
         }
       });
+      accordionButton.addEventListener('focus', () => {
+        hideActiveClass();
+        accordion.classList.add('footer__group--active');
+      });
+      accordionButton.addEventListener('blur', () => {
+        hideActiveClass();
+      });
     }
   }
 
@@ -60,9 +66,9 @@ window.addEventListener('DOMContentLoaded', () => {
   anchor.addEventListener('click', toSlide);
 
 
-  // Form validation
-  form.addEventListener('submit', formSend);
-  formPopup.addEventListener('submit', formSend);
+  // Проверка форм на валидность
+  form.addEventListener('submit', formSendForm);
+  formPopup.addEventListener('submit', formSendPopup);
 
 
   // ---------------------------------

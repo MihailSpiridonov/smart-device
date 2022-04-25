@@ -1,18 +1,22 @@
 .site-sections {
-  width: 39%;
+  width: 38%;
+  min-width: 460px;
   padding: 0;
   padding-top: 5px;
-  margin: 0;
-  margin-right: 2.5%;
+  margin: 0 2.8%;
   box-sizing: border-box;
 
   @media (max-width: $tablet-width) {
+    width: 47%;
+    min-width: 330px;
+    margin-left: 0;
     margin-right: auto;
   }
 
   @media (max-width: $mobile-width) {
     position: relative;
     width: 100%;
+    min-width: 100%;
     padding: 0;
     margin: 0 auto;
   }
@@ -64,13 +68,14 @@
 
 .site-sections ul {
   display: grid;
-  grid-template-columns: 55% 45%;
+  grid-template-columns: 53% 47%;
   padding: 0;
   margin: 0;
   list-style: none;
 
   @media (max-width: $tablet-width) {
     grid-template-columns: 1fr;
+    width: 80%;
   }
 
   @media (max-width: $mobile-width) {
@@ -99,13 +104,69 @@
 }
 
 .site-sections li {
-  width: 80%;
+  width: 85%;
   padding: 0;
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 
   @media (max-width: $tablet-width) {
     margin-bottom: 7px;
+  }
+}
+
+.site-sections li:nth-child(1) {
+  order: 1;
+
+  @media (max-width: $tablet-width) {
+    order: 0;
+  }
+}
+
+.site-sections li:nth-child(2) {
+  order: 3;
+
+  @media (max-width: $tablet-width) {
+    order: 0;
+  }
+}
+
+.site-sections li:nth-child(3) {
+  order: 5;
+
+  @media (max-width: $tablet-width) {
+    order: 0;
+  }
+}
+
+.site-sections li:nth-child(4) {
+  order: 7;
+
+  @media (max-width: $tablet-width) {
+    order: 0;
+  }
+}
+
+.site-sections li:nth-child(5) {
+  order: 2;
+
+  @media (max-width: $tablet-width) {
+    order: 0;
+  }
+}
+
+.site-sections li:nth-child(6) {
+  order: 4;
+
+  @media (max-width: $tablet-width) {
+    order: 0;
+  }
+}
+
+.site-sections li:nth-child(7) {
+  order: 6;
+
+  @media (max-width: $tablet-width) {
+    order: 0;
   }
 }
 

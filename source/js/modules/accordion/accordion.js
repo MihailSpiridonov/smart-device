@@ -1,4 +1,6 @@
 const accordions = document.querySelectorAll('[data-accordion]');
+const accordionSiteSections = document.querySelector('[data-accordion--site-sections]');
+const accordionContacts = document.querySelector('[data-accordion--contacts]');
 const footer = document.querySelector('[data-footer]');
 
 function hideActiveClass() {
@@ -20,4 +22,4 @@ function closeAccordion(accordion) {
   accordion.classList.add('footer__group--close');
 }
 
-export {accordions, footer, hideActiveClass, hideNoActiveClass, openAccordion, closeAccordion};
+export {accordions, accordionSiteSections, accordionContacts, footer, hideActiveClass, hideNoActiveClass, openAccordion, closeAccordion};

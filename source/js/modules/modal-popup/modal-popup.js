@@ -2,6 +2,7 @@ const buttonOpenPopup = document.querySelector('[data-popup-open]');
 const modalPopup = document.querySelector('[data-popup]');
 const modalPopupClose = modalPopup.querySelector('[data-popup-close]');
 const inputNamePopup = document.querySelector('[data-popup-name]');
+const inputCheckboxPopup = document.querySelector('[data-popup-checkbox]');
 const body = document.querySelector('[data-body]');
 
 
@@ -24,7 +25,9 @@ function showModal() {
   body.classList.add('page__body--overlay');
   document.addEventListener('keydown', hideModalESC);
   modalPopupClose.addEventListener('click', hideModal);
-  modalPopupClose.addEventListener('keydown', hideModalKeyboard);
+  document.addEventListener('keydown', hideModalKeyboard);
+  document.addEventListener('keydown', setManageFocusPopup);
+  document.addEventListener('keydown', setCheckbox);
   modalPopup.addEventListener('click', hideModalClickPast);
   focusRestrict();
 }
@@ -55,6 +58,7 @@ const hideModalESC = (evt) => {
   }
 };
 
+
 // Добавление класса на кнопку при фокусировке
 modalPopupClose.onfocus = function () {
   modalPopupClose.classList.add('popup__close--focus');
@@ -64,6 +68,17 @@ modalPopupClose.onfocus = function () {
 modalPopupClose.onblur = function () {
   modalPopupClose.classList.remove('popup__close--focus');
 };
+
+// Добавление класса на кнопку при фокусировке
+inputCheckboxPopup.onfocus = function () {
+  inputCheckboxPopup.classList.add('popup__checkbox--focus');
+};
+
+// Добавление класса на кнопку при фокусировке
+inputCheckboxPopup.onblur = function () {
+  inputCheckboxPopup.classList.remove('popup__checkbox--focus');
+};
+
 
 //  Закрытие popup клавишами ENTER и пробел
 const hideModalKeyboard = (evt) => {
@@ -75,6 +90,23 @@ const hideModalKeyboard = (evt) => {
     modalPopupClose.removeEventListener('click', hideModal);
     modalPopupClose.removeEventListener('keydown', hideModalKeyboard);
     modalPopup.removeEventListener('click', hideModalClickPast);
+  }
+};
+
+//  Удержание фокуса внутри попапа
+const setManageFocusPopup = (evt) => {
+  if (inputCheckboxPopup.classList.contains('popup__checkbox--focus') && modalPopup.classList.contains('popup--open') && evt.which === 9) {
+    modalPopupClose.focus();
+  } else if (modalPopupClose.classList.contains('popup__close--focus') && modalPopup.classList.contains('popup--open') && evt.which === 16) {
+    modalPopupClose.focus();
+  }
+};
+
+
+// Управление checkbox-ом с клавиатуры
+const setCheckbox = (evt) => {
+  if (inputCheckboxPopup.classList.contains('popup__checkbox--focus') && modalPopup.classList.contains('popup--open') && evt.which === 13 || inputCheckboxPopup.classList.contains('popup__checkbox--focus') && modalPopup.classList.contains('popup--open') && evt.which === 32) {
+    inputCheckboxPopup.classList.toggle('label--checked');
   }
 };
 

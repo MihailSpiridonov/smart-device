@@ -1,12 +1,14 @@
 .services {
   min-height: 960px;
   padding-top: 70px;
+  padding-bottom: 130px;
   background-color: $dark-blue;
   box-sizing: border-box;
 
   @media (max-width: $tablet-width) {
     min-height: 1080px;
     padding-top: 55px;
+    padding-bottom: 75px;
   }
 
   @media (max-width: $mobile-width) {
@@ -62,39 +64,38 @@
 }
 
 .services__wrapper ul {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28.5%, 28.5%));
+  grid-template-rows: 1fr;
+  justify-content: center;
+  gap: 84px;
   width: 100%;
   padding: 0;
   margin: 0;
   list-style: none;
 
+  @media (max-width: $small-desktop-width) {
+    grid-template-columns: repeat(auto-fit, minmax(28.5%, 350px));
+    gap: 60px;
+  }
+
   @media (max-width: $tablet-width) {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1fr);
+    gap: 30px;
   }
 }
 
 .services__wrapper li {
   z-index: 1;
-  width: 30%;
   min-height: 650px;
   padding: 0;
   margin: 0;
-  margin-right: 86px;
-
-  &:last-child {
-    margin-right: 0;
-    margin-bottom: 0;
-  }
 
   @media (max-width: $tablet-width) {
     width: 100%;
     min-height: 250px;
     margin-right: 0;
-    margin-bottom: 30px;
-  }
-
-  @media (max-width: $mobile-width) {
-    margin-bottom: 28px;
   }
 }
 

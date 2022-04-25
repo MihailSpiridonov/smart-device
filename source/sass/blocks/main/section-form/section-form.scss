@@ -1,11 +1,11 @@
 .section-form {
   position: relative;
   min-height: 840px;
-  background-color: $background-blue--lighter;
   overflow: hidden;
 
   @media (max-width: $tablet-width) {
     min-height: 580px;
+    background-color: $background-blue--lighter;
   }
 
   @media (max-width: $mobile-width) {
@@ -14,26 +14,34 @@
 }
 
 .section-form__desctop-background {
-  transform: rotate(-40.7deg);
   position: absolute;
-  top: -47%;
-  left: -33%;
-  width: 1565px;
-  height: 950px;
-  background-color: $background-blue;
-
-  @media (max-width: $small-desktop-width) {
-    transform: rotate(-55deg);
-    left: -63%;
-  }
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: $background-blue--lighter;
+  overflow: hidden;
 
   @media (max-width: $tablet-width) {
     display: none;
   }
 }
 
+.section-form__second-background {
+  position: absolute;
+  transform: translateX(-100vw);
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  border-top: 840px solid $background-blue;
+  border-right: 970px solid transparent;
+}
+
 .section-form__wrapper {
   display: flex;
+  justify-content: center;
   width: 63vw;
   height: 100%;
   padding: 0;
@@ -74,8 +82,10 @@
 
 .section-form__form {
   width: 48%;
+  min-width: 580px;
 
   @media (max-width: $tablet-width) {
     width: 100%;
+    min-width: 100%;
   }
 }

@@ -12,8 +12,8 @@
     <link rel="preload" href="fonts/RobotoCondensed-Bold.woff" as="font" type="font/woff" crossorigin>
     <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/RobotoCondensed-Regular.woff" as="font" type="font/woff" crossorigin>
-    <link rel="icon" href="favicon/logo-icon.ico">
-    <link rel="icon" href="favicon/logo-icon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon/favicon.ico">
+    <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
 
@@ -104,7 +104,7 @@
       <section class="advantages wrapper">
         <h2 class="visually-hidden">Наши преимущества</h2>
         <ul>
-          <li tabindex="0">
+          <li>
             <div class="advantages__card advantages__card--big">
               <svg width="35" height="35" aria-label="Иконка, изображающая будильник">
                 <use xlink:href="img/sprite_auto.svg#stopwatch"></use>
@@ -113,7 +113,7 @@
               <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и&nbsp;доставлять заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки</p>
             </div>
           </li>
-          <li tabindex="0">
+          <li>
             <div class="advantages__card advantages__card--big">
               <svg width="35" height="35" aria-label="Иконка, изображающая людей под часами">
                 <use xlink:href="img/sprite_auto.svg#hired"></use>
@@ -122,7 +122,7 @@
               <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с&nbsp;такими компаниями обеспичивает хорошее качество нашей продукции.</p>
             </div>
           </li>
-          <li tabindex="0">
+          <li>
             <div class="advantages__card">
               <svg width="35" height="35" aria-label="Иконка, изображающая детектива">
                 <use xlink:href="img/sprite_auto.svg#detective"></use>
@@ -131,7 +131,7 @@
               <p>По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную конфеденциальность.</p>
             </div>
           </li>
-          <li tabindex="0">
+          <li>
             <div class="advantages__card">
               <svg width="35" height="35" aria-label="Иконка, изображающая ярлык">
                 <use xlink:href="img/sprite_auto.svg#tag"></use>
@@ -259,7 +259,9 @@
 
       <section class="section-form" id="section-form">
         <h2 class="visually-hidden">Форма обратной связи</h2>
-        <div class="section-form__desctop-background"></div>
+        <div class="section-form__desctop-background">
+          <div class="section-form__second-background"></div>
+        </div>
         <div class="section-form__wrapper wrapper">
           <div class="section-form__image">
             <picture>
@@ -307,10 +309,10 @@
     <aside class="popup popup--close" data-popup tabindex="0">
       <div class="popup__wrapper" id="show-popup">
         <form action="https://echo.htmlacademy.ru/" method="get" name="your question" data-form-popup>
-          <button class="popup__close" aria-label="Кнопка закрытия Всплывающего окна" data-popup-close>
+          <div class="popup__close" data-popup-close>
             <div class="popup__line popup__line--1"></div>
             <div class="popup__line popup__line--2"></div>
-          </button>
+          </div>
           <div class="popup__wrapper-title">
             <h2>Закажите звонок</h2>
             <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
@@ -329,9 +331,9 @@
             </label>
           </div>
           <div class="popup__wrapper-submit-and-checkbox">
-            <button type="submit">Отправить</button>
+            <button type="submit" data-popup-submit>Отправить</button>
             <input id="checkbox-popup" type="checkbox" name="checkbox" required>
-            <label for="checkbox-popup" tabindex="0">
+            <label for="checkbox-popup" tabindex="0" data-popup-checkbox>
               <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
             </label>
           </div>
@@ -386,13 +388,13 @@
             </ul>
           </div>
         </div>
-        <div class="footer__group footer__site-sections site-sections" data-accordion>
-          <div class="footer__wrapper-accordion" tabindex="0" data-accordion-button>
+        <div class="footer__group footer__site-sections site-sections" data-accordion data-accordion--site-sections>
+          <div class="footer__wrapper-accordion">
             <h2>Разделы сайта</h2>
-            <button class="site-sections__button accordion">
+            <div class="site-sections__button accordion" tabindex="0" data-accordion-button>
               <div class="accordion__line accordion__line--1"></div>
               <div class="accordion__line accordion__line--2"></div>
-            </button>
+            </div>
           </div>
           <ul>
             <li id="page-about">
@@ -418,17 +420,17 @@
             </li>
           </ul>
         </div>
-        <div class="footer__group footer__contacts contacts" data-accordion>
+        <div class="footer__group footer__contacts contacts" data-accordion data-accordion--contacts>
           <h2 class="visually-hidden">Наши контакты</h2>
-          <div class="footer__wrapper-accordion" tabindex="0" data-accordion-button>
+          <div class="footer__wrapper-accordion">
             <h3>Наш офис</h3>
-            <button class="contacts__button accordion">
+            <div class="contacts__button accordion" tabindex="0" data-accordion-button>
               <div class="accordion__line accordion__line--1"></div>
               <div class="accordion__line accordion__line--2"></div>
-            </button>
+            </div>
           </div>
           <div class="contacts__wrapper">
-            <p>г.&nbsp;Мытищи, Олимпийский проспект, д.&nbsp;10</p>
+            <p>г.&nbsp;Мытищи, Олимпийский проспект, д.10</p>
             <a href="tel:84955894050">+7 (495) 589-40-50</a>
             <a href="tel:89253895829">+7 (925) 389-58-29</a>
             <a href="tel:89253647813">+7 (925) 364-78-13</a>

@@ -1,3 +1,5 @@
+// import {phoneInputs} from '././mask-input-phone/mask-input-phone.js';
+
 const form = document.querySelector('[data-form]');
 const formPopup = document.querySelector('[data-form-popup]');
 const MIN_LENGTH_INPUT = 18;
@@ -15,24 +17,24 @@ function formRemoveError(input) {
   input.classList.remove('error');
 }
 
-
 function formValidate(element) {
   let error = 0;
   let formRequired = element.querySelectorAll('[required]');
 
   if (formRequired.length > 0) {
     for (let i = 0; i < formRequired.length; i++) {
-      formRemoveError(formRequired[i]);
+      const input = formRequired[i];
+      formRemoveError(input);
 
-      if (formRequired[i].getAttribute('type') === 'checkbox' && formRequired[i].checked === false) {
-        formAddError(formRequired[i]);
+      if (input.getAttribute('type') === 'checkbox' && input.checked === false) {
+        formAddError(input);
         error++;
-      } else if (formRequired[i].getAttribute('type') === 'tel' && formRequired[i].value.length < MIN_LENGTH_INPUT) {
-        formAddError(formRequired[i]);
+      } else if (input.getAttribute('type') === 'tel' && input.value.length < MIN_LENGTH_INPUT) {
+        formAddError(input);
         error++;
       } else {
-        if (formRequired[i].value === '') {
-          formAddError(formRequired[i]);
+        if (input.value === '') {
+          formAddError(input);
           error++;
         }
       }
@@ -42,7 +44,18 @@ function formValidate(element) {
 }
 
 
-function formSend(evt) {
+function validateLength(phoneInput) {
+  const valueLength = phoneInput.value.length;
+
+  if (valueLength < MIN_LENGTH_INPUT) {
+    phoneInput.setCustomValidity(`Ещё ${ MIN_LENGTH_INPUT - valueLength } симв.`);
+  } else {
+    phoneInput.setCustomValidity('');
+  }
+}
+
+
+function formSendForm(evt) {
   evt.preventDefault();
   let error = formValidate(form);
 
@@ -57,4 +70,19 @@ function formSend(evt) {
 }
 
 
-export {form, formPopup, formSend};
+function formSendPopup(evt) {
+  evt.preventDefault();
+  let error = formValidate(formPopup);
+
+  if (error === 0) {
+    // eslint-disable-next-line no-alert
+    alert('GREAT');
+    formPopup.reset();
+  } else {
+    // eslint-disable-next-line no-alert
+    alert('WARNING');
+  }
+}
+
+
+export {form, formPopup, formSendPopup, formSendForm, validateLength};

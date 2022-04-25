@@ -1,7 +1,8 @@
 .contacts {
+  width: 28%;
+  min-width: 300px;
   padding: 0;
   padding-top: 5px;
-  padding-left: 20px;
   margin: 0;
   box-sizing: border-box;
 
@@ -14,6 +15,7 @@
   @media (max-width: $mobile-width) {
     position: relative;
     width: 100%;
+    min-width: 100%;
     padding: 0;
     margin: 0 auto;
   }

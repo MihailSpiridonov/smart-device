@@ -22,9 +22,10 @@
 }
 
 .footer__logo-and-socials {
+  min-width: 20%;
   padding: 0;
   margin: 0;
-  margin-right: 13%;
+  margin-right: auto;
 
   @media (max-width: $tablet-width) {
     display: flex;
@@ -57,6 +58,7 @@
 
 .footer__wrapper-accordion {
   @media (max-width: $mobile-width) {
+    position: relative;
     width: 100vw;
     padding: 22px;
     padding-left: 9.5%;
