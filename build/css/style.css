@@ -3136,6 +3136,14 @@ img {
     margin-bottom: 17px;
   }
 
+  .form input[type="checkbox"] {
+    bottom: -15px;
+    width: 100%;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+  }
+
   .form span {
     padding-left: 5px;
   }
@@ -3248,6 +3256,7 @@ img {
   }
 
   .footer__group--open ul {
+    display: block;
     height: auto;
     margin-bottom: 10px;
     overflow: visible;
@@ -3255,6 +3264,7 @@ img {
   }
 
   .footer__group--close ul {
+    display: none;
     height: 0;
     padding-top: 0;
     overflow: hidden;
@@ -3310,6 +3320,13 @@ img {
   }
 
   .footer__group--open .contacts__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
     height: auto;
     padding-bottom: 7px;
     overflow: visible;
@@ -3317,6 +3334,7 @@ img {
   }
 
   .footer__group--close .contacts__wrapper {
+    display: none;
     height: 0;
     padding-bottom: 0;
     overflow: hidden;

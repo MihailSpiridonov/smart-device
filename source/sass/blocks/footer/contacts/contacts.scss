@@ -81,6 +81,8 @@
 
 .footer__group--open .contacts__wrapper {
   @media (max-width: $mobile-width) {
+    display: flex;
+    flex-direction: column;
     height: auto;
     padding-bottom: 7px;
     overflow: visible;
@@ -90,6 +92,7 @@
 
 .footer__group--close .contacts__wrapper {
   @media (max-width: $mobile-width) {
+    display: none;
     height: 0;
     padding-bottom: 0;
     overflow: hidden;

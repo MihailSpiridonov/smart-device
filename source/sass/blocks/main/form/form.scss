@@ -271,6 +271,12 @@
   @media (max-width: $tablet-width) {
     width: 50%;
   }
+
+  @media (max-width: $mobile-width) {
+    bottom: -15px;
+    width: 100%;
+    height: min-content;
+  }
 }
 
 .form span {
