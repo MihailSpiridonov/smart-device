@@ -293,7 +293,7 @@
               <div class="form__wrapper-submit-and-checkbox">
                 <button type="submit">Задать вопрос</button>
                 <input id="checkbox" type="checkbox" name="checkbox" required>
-                <label for="checkbox" tabindex="0">
+                <label for="checkbox">
                   <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
                 </label>
               </div>
@@ -309,7 +309,7 @@
     <aside class="popup popup--close" data-popup tabindex="0">
       <div class="popup__wrapper" id="show-popup">
         <form action="https://echo.htmlacademy.ru/" method="get" name="your question" data-form-popup>
-          <div class="popup__close" data-popup-close>
+          <div class="popup__close" tabindex="0" data-popup-close>
             <div class="popup__line popup__line--1"></div>
             <div class="popup__line popup__line--2"></div>
           </div>
@@ -322,7 +322,7 @@
               <input type="text" name="name" placeholder="Имя" data-popup-name required>
             </label>
             <label>
-              <input type="tel" name="phone" placeholder="Телефон" minlength="15" maxlength="18" data-input-phone required>
+              <input type="tel" name="phone" placeholder="Телефон" minlength="17" maxlength="18" data-input-phone required>
             </label>
           </div>
           <div class="popup__textarea">
@@ -332,8 +332,8 @@
           </div>
           <div class="popup__wrapper-submit-and-checkbox">
             <button type="submit" data-popup-submit>Отправить</button>
-            <input id="checkbox-popup" type="checkbox" name="checkbox" required>
-            <label for="checkbox-popup" tabindex="0" data-popup-checkbox>
+            <input id="checkbox-popup" type="checkbox" name="checkbox" data-popup-checkbox required>
+            <label for="checkbox-popup">
               <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
             </label>
           </div>

@@ -3,7 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {accordions, footer, hideActiveClass, hideNoActiveClass, openAccordion, closeAccordion} from './modules/accordion/accordion.js';
 import {aboutBlock, aboutButton, showDescription} from './modules/description/description.js';
 import {anchor, toSlide} from './modules/smooth-scroll/smooth-scroll.js';
-import {form, formPopup, formSendPopup, formSendForm} from './modules/form-validation/form-validation.js';
+import {form, formPopup, formSendPopup, formSendForm, validateLength} from './modules/form-validation/form-validation.js';
 import {buttonOpenPopup, showModal} from './modules/modal-popup/modal-popup.js';
 import {phoneInputs, onPhoneKeyDown, onPhoneInput, onPhonePaste} from './modules/mask-input-phone/mask-input-phone.js';
 
@@ -17,6 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
     input.addEventListener('keydown', onPhoneKeyDown);
     input.addEventListener('input', onPhoneInput);
     input.addEventListener('paste', onPhonePaste);
+    input.addEventListener('input', validateLength);
   }
 
 

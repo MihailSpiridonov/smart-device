@@ -63,8 +63,10 @@
 
 .section-form__image {
   z-index: 1;
-  width: 510px;
-  height: 285px;
+  width: 42%;
+  max-width: 510px;
+  height: auto;
+  max-height: 285px;
   padding: 0;
   padding-top: 80px;
   margin: 0;

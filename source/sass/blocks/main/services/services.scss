@@ -65,9 +65,8 @@
 
 .services__wrapper ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(28.5%, 28.5%));
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
-  justify-content: center;
   gap: 84px;
   width: 100%;
   padding: 0;
@@ -75,8 +74,7 @@
   list-style: none;
 
   @media (max-width: $small-desktop-width) {
-    grid-template-columns: repeat(auto-fit, minmax(28.5%, 350px));
-    gap: 60px;
+    gap: 50px;
   }
 
   @media (max-width: $tablet-width) {

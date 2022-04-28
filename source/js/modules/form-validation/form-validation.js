@@ -1,5 +1,3 @@
-// import {phoneInputs} from '././mask-input-phone/mask-input-phone.js';
-
 const form = document.querySelector('[data-form]');
 const formPopup = document.querySelector('[data-form-popup]');
 const MIN_LENGTH_INPUT = 18;
@@ -30,6 +28,7 @@ function formValidate(element) {
         formAddError(input);
         error++;
       } else if (input.getAttribute('type') === 'tel' && input.value.length < MIN_LENGTH_INPUT) {
+        input.setCustomValidity('Введите номер полностью');
         formAddError(input);
         error++;
       } else {
@@ -44,13 +43,18 @@ function formValidate(element) {
 }
 
 
-function validateLength(phoneInput) {
-  const valueLength = phoneInput.value.length;
+function validateLength() {
+  const phoneInputs = document.querySelectorAll('[data-input-phone]');
 
-  if (valueLength < MIN_LENGTH_INPUT) {
-    phoneInput.setCustomValidity(`Ещё ${ MIN_LENGTH_INPUT - valueLength } симв.`);
-  } else {
-    phoneInput.setCustomValidity('');
+  for (let i = 0; i < phoneInputs.length; i++) {
+    const phoneInput = phoneInputs[i];
+    const valueLength = phoneInput.value.length;
+
+    if (valueLength < MIN_LENGTH_INPUT) {
+      phoneInput.setCustomValidity(`Ещё ${ MIN_LENGTH_INPUT - valueLength } симв.`);
+    } else {
+      phoneInput.setCustomValidity('');
+    }
   }
 }
 

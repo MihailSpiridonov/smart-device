@@ -19,7 +19,7 @@
 .about__image {
   position: relative;
   width: 350px;
-  min-height: 300px;
+  min-height: 100%;
   padding: 0;
   padding-left: 50px;
   margin: 0;
@@ -28,7 +28,6 @@
 
   @media (max-width: $tablet-width) {
     width: 650px;
-    min-height: 300px;
     margin-right: 28px;
   }
 
@@ -42,12 +41,12 @@
   top: 5px;
   left: 0;
   width: 100%;
+  min-height: 100%;
   max-height: 100%;
   object-fit: contain;
 
   @media (max-width: $tablet-width) {
-    top: 0;
-    padding-top: 5px;
+    top: -30px;
   }
 }
 

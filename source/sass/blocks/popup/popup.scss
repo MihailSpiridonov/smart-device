@@ -262,6 +262,7 @@
 }
 
 .popup__wrapper-submit-and-checkbox {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -312,7 +313,12 @@
 }
 
 .popup input[type="checkbox"] {
-  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  appearance: none;
+  background: none;
+  border: none;
 }
 
 .popup span {

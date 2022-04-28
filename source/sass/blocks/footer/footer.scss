@@ -32,13 +32,13 @@
     justify-content: space-between;
     width: 100%;
     margin-right: 0;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
   }
 
   @media (max-width: $mobile-width) {
     flex-direction: column;
     justify-content: flex-start;
-    margin-bottom: 17px;
+    margin-bottom: 0;
   }
 }
 
