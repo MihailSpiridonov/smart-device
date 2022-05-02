@@ -63,6 +63,21 @@
   }
 }
 
+.popup__close input[type="button"] {
+  position: absolute;
+  left: 2px;
+  bottom: 0;
+  min-width: 25px;
+  width: 25px;
+  min-height: 30px;
+  padding: 0;
+  padding-left: 5px;
+  appearance: none;
+  background: none;
+  background-color: $background-blue--lighter;
+  border: none;
+}
+
 .popup__line {
   position: absolute;
   content: "";
@@ -316,9 +331,14 @@
   position: absolute;
   right: 0;
   bottom: 0;
+  min-height: 40px;
   appearance: none;
   background: none;
   border: none;
+
+  &:focus {
+    background-color: $background-blue;
+  }
 }
 
 .popup span {

@@ -96,6 +96,7 @@ const hideModalKeyboard = (evt) => {
 //  Удержание фокуса внутри попапа
 const setManageFocusPopup = (evt) => {
   if (inputCheckboxPopup.classList.contains('popup__checkbox--focus') && modalPopup.classList.contains('popup--open') && evt.which === 9) {
+    inputCheckboxPopup.blur();
     modalPopupClose.focus();
   } else if (modalPopupClose.classList.contains('popup__close--focus') && modalPopup.classList.contains('popup--open') && evt.which === 16) {
     modalPopupClose.focus();

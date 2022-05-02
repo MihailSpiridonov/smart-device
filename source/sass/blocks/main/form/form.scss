@@ -265,6 +265,7 @@
   bottom: 0;
   appearance: none;
   width: 10px;
+  min-height: 45px;
   background: none;
   border: none;
 
@@ -276,29 +277,6 @@
     bottom: -15px;
     width: 100%;
     height: min-content;
-  }
-}
-
-.form span {
-  display: block;
-  padding: 0;
-  padding-top: 17px;
-  padding-left: 25px;
-  margin: 0;
-  font-family: $pt-mono;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  color: $text-white-absolute;
-  opacity: 0.8;
-  box-sizing: border-box;
-
-  @media (max-width: $tablet-width) {
-    padding-top: 9px;
-  }
-
-  @media (max-width: $mobile-width) {
-    padding-left: 5px;
   }
 }
 
@@ -328,8 +306,8 @@
 .form__wrapper-submit-and-checkbox label::after {
   position: absolute;
   content: "";
-  top: 23px;
   left: 50px;
+  top: 21px;
   width: 13px;
   height: 13px;
   border: 1px solid $text-white-absolute;
@@ -349,8 +327,8 @@
   display: block;
   position: absolute;
   content: "";
-  top: 26px;
   left: 53px;
+  top: 25px;
   z-index: 1;
   width: 12px;
   height: 8px;
@@ -364,6 +342,29 @@
 
   @media (max-width: $mobile-width) {
     left: 9px;
+  }
+}
+
+.form span {
+  display: block;
+  padding: 0;
+  padding-top: 17px;
+  padding-left: 25px;
+  margin: 0;
+  font-family: $pt-mono;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: $text-white-absolute;
+  opacity: 0.8;
+  box-sizing: border-box;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 9px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 5px;
   }
 }
 
