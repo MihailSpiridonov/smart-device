@@ -44,8 +44,8 @@
   content: "";
   top: 25px;
   right: 15px;
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
   padding-left: 10px;
   background: none;
   border: none;
@@ -65,17 +65,16 @@
 
 .popup__close input[type="button"] {
   position: absolute;
-  left: 2px;
-  bottom: 0;
-  min-width: 25px;
-  width: 25px;
-  min-height: 30px;
+  left: 2.5px;
+  bottom: 5px;
   padding: 0;
   padding-left: 5px;
   appearance: none;
   background: none;
   background-color: $background-blue--lighter;
   border: none;
+  font-size: 1px;
+  cursor: pointer;
 }
 
 .popup__line {
